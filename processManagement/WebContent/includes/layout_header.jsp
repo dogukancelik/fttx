@@ -18,13 +18,26 @@
 		<div class="name">Dogukan Celik</div>
 	</div>
 	<div class="sep"></div>
-	<div class="leftMenu"></div>
+	<div class="leftMenu">
+		<ul>
+			<li><i class="fa fa-circle"></i> Item1</li>
+			<li><i class="fa fa-circle"></i> Item2</li>
+			<li><i class="fa fa-circle"></i> Item3</li>
+			<li><i class="fa fa-circle"></i> Item4</li>
+			<li><i class="fa fa-circle"></i> Item5</li>
+			<li><i class="fa fa-circle"></i> Item6</li>
+			<li><i class="fa fa-circle"></i> Item7</li>
+			<li><i class="fa fa-circle"></i> Item8</li>
+			<li><i class="fa fa-circle"></i> Item9</li>
+			<li><i class="fa fa-circle"></i> Item10</li>
+		</ul>
+	</div>
 	
 	<div class="userMenu">
 		<img src="img/arrowUp.png"/>
 		<ul>
-			<li><a href="myAccount/">My Account</a></li>
-			<li><a href="signOut/">Sign Out</a></li>
+			<li><a href="myAccount/"><i class="fa fa-user-circle"></i> My Account</a></li>
+			<li><a href="signOut/"><i class="fa fa-sign-out"></i> Sign Out</a></li>
 		</ul>
 	</div>
 		
