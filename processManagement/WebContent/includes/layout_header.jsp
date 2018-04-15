@@ -4,13 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ProcessManagement</title>
 <link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/formElements.css">
 <link rel="stylesheet" href="css/font-awesome.css">
 <script type="text/javascript" src="js/default.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
 	<div class="head">
-		<div class="logo"><a href="index.jsp">Process Management</a></div>
+		<div class="logo"><a href="index">Process Management</a></div>
 		<div class="user" onclick="userMenu()">
 			<img src="img/User-icon.png" align="left"/>
 			<i class="fa fa-angle-down" style="font-size:22px;"></i>
@@ -36,8 +37,8 @@
 	<div class="userMenu">
 		<img src="img/arrowUp.png"/>
 		<ul>
-			<li><a href="myAccount/"><i class="fa fa-user-circle"></i> My Account</a></li>
-			<li><a href="signOut/"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+			<li><a href="myAccount"><i class="fa fa-user-circle"></i> My Account</a></li>
+			<li><a href="signOut"><i class="fa fa-sign-out"></i> Sign Out</a></li>
 		</ul>
 	</div>
 		

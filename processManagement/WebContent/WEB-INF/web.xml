@@ -9,8 +9,16 @@
 		<jsp-file>/login.jsp</jsp-file>
 	</servlet>
 	<servlet>
+		<servlet-name>signOut</servlet-name>
+		<jsp-file>/signOut.jsp</jsp-file>
+	</servlet>
+	<servlet>
 		<servlet-name>index</servlet-name>
 		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>myAccount</servlet-name>
+		<jsp-file>/myAccount.jsp</jsp-file>
 	</servlet>
 	
 	<servlet-mapping>
@@ -18,7 +26,15 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 	<servlet-mapping>
+        <servlet-name>signOut</servlet-name>
+        <url-pattern>/signOut</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+        <servlet-name>myAccount</servlet-name>
+        <url-pattern>/myAccount</url-pattern>
     </servlet-mapping>
 </web-app>
