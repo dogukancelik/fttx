@@ -11,7 +11,10 @@
 </head>
 <body>
 	<div class="head">
-		<div class="logo"><a href="index">Process Management</a></div>
+		<div class="logo">
+			<i class="fa fa-navicon" onclick="leftMenu()"></i> 
+			<a href="index">Process Management</a>
+		</div>
 		<div class="user" onclick="userMenu()">
 			<img src="img/User-icon.png" align="left"/>
 			<i class="fa fa-angle-down" style="font-size:22px;"></i>

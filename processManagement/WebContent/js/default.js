@@ -7,3 +7,37 @@ function userMenu(){
 		$(".userMenu").css("display", "none");
 	}
 }
+
+function leftMenu(){
+	var c = getCookie("leftMenu");
+	if(c == 0){
+		setCookie("leftMenu", 1, 365*24*60*60);
+		$(".leftMenu").addClass("wide");
+		$(".content").addClass("wide");
+	}
+	else{
+		setCookie("leftMenu", 0, 365*24*60*60);
+		$(".leftMenu").removeClass("wide");
+		$(".content").removeClass("wide");
+	}
+}
+
+function getCookie(name){
+	var cookieString = document.cookie;
+	var allCookie = cookieString.split(";");
+	
+	for(var i=0; i<allCookie.length; i++){
+		var str = allCookie[i].split("=");
+		if(str[0] == name){
+			return str[1];
+			break;
+		}
+	}
+}
+
+function setCookie(name, value, exp) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exp*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + exp + ";path=/";
+}
