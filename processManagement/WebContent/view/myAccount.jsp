@@ -7,6 +7,7 @@
 	String action = request.getParameter("action");
 	if(action == null){
 	%>
+	<%@page import="model.User"%>
 	<div class="contentItem">
 		<div class="head"><i class="fa fa-user-circle"></i> My Account</div>
 		<table style="margin:15px;">

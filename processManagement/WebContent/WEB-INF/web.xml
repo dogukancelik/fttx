@@ -6,19 +6,19 @@
 	
 	<servlet>
 		<servlet-name>login</servlet-name>
-		<jsp-file>/login.jsp</jsp-file>
+		<jsp-file>/view/login.jsp</jsp-file>
 	</servlet>
 	<servlet>
 		<servlet-name>signOut</servlet-name>
-		<jsp-file>/signOut.jsp</jsp-file>
+		<jsp-file>/view/signOut.jsp</jsp-file>
 	</servlet>
 	<servlet>
 		<servlet-name>index</servlet-name>
-		<jsp-file>/index.jsp</jsp-file>
+		<jsp-file>/view/index.jsp</jsp-file>
 	</servlet>
 	<servlet>
 		<servlet-name>myAccount</servlet-name>
-		<jsp-file>/myAccount.jsp</jsp-file>
+		<jsp-file>/view/myAccount.jsp</jsp-file>
 	</servlet>
 	
 	<servlet-mapping>
