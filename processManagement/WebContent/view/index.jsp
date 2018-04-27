@@ -1,6 +1,6 @@
-<%@ include file="/includes/secure.jsp" %>
+<%@ include file="/view/shared/secure.jsp" %>
 
-<%@ include file="/includes/layout_header.jsp" %>
+<%@ include file="/view/shared/layout_header.jsp" %>
 
 <script type="text/javascript" src="js/calendar.js"></script>
 <link rel="stylesheet" href="css/calendar.css">
@@ -24,4 +24,4 @@
 	</div> 
 </div>
 
-<%@ include file="/includes/layout_footer.jsp" %>
+<%@ include file="/view/shared/layout_footer.jsp" %>
