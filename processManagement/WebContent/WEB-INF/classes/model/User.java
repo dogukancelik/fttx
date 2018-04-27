@@ -1,5 +1,6 @@
 package model;
 
+// http://www.ugurkizmaz.com/YazilimMakale-1625-Java-ile-MySQL-Baglantisi.aspx
 public class User{
 	
 	private int userId;
