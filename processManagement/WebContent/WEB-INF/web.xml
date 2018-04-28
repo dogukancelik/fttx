@@ -24,6 +24,10 @@
 		<servlet-name>myAccount</servlet-name>
 		<jsp-file>/view/myAccount.jsp</jsp-file>
 	</servlet>
+	<servlet>
+    	<servlet-name>t</servlet-name>
+    	<servlet-class>DBContext.dbContext</servlet-class>
+  	</servlet>
 	
 	<servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -41,4 +45,8 @@
         <servlet-name>myAccount</servlet-name>
         <url-pattern>/myAccount</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>t</servlet-name>
+    <url-pattern>/t</url-pattern>
+  </servlet-mapping>
 </web-app>
