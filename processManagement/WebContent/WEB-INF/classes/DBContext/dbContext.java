@@ -2,7 +2,7 @@ package DBContext;
 
 public class dbContext {
 	
-	public dbContext () {
+	public dbContext (String Con) {
 		
 		
 		
