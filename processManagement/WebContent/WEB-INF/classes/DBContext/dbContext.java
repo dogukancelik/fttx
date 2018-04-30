@@ -1,35 +1,48 @@
 package DBContext;
 
-//import com.mysql.jdbc.PreparedStatement;
-//import com.mysql.jdbc.Statement;
+
 import java.sql.DriverManager;
-//import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public  class dbContext {
 	
+	private static int connectionStatus ;
 	private static java.sql.Connection con;
-	public static void ConnectionOpen() throws SQLException, ClassNotFoundException {
+	
+	private static void Close()  throws SQLException, ClassNotFoundException { con.close(); connectionStatus=0; }
+	private static java.sql.Connection  Open() throws SQLException, ClassNotFoundException
+	{
 		String Host = "jdbc:mysql://localhost:3306/"; 
-		String dbName = "menu";
+		String dbName = "processmanagement";
 		String Username = "root";
-		String Password = "";
-		
+		String Password = "root";
 		Class.forName("com.mysql.jdbc.Driver");
-		 con =DriverManager.getConnection(Host + dbName, Username, Password);	
-		
-		/*String query = "Select * from allmenu";
-		 PreparedStatement psmt = (PreparedStatement) con.prepareStatement(query);
-		 ResultSet rs = psmt.executeQuery();
-		 while(rs.next()) {
-			 System.out.println(rs.getString(1));
-		 }*/
-		
+		 con =DriverManager.getConnection(Host + dbName, Username, Password);
+		connectionStatus=1;
+  return con;
 	}
+		
+	public static java.sql.Connection ConnectionOpen() throws SQLException, ClassNotFoundException {
+		
+		if(connectionStatus==0) {		
+			 Open();
+			return con;
+			}
+		else
+			{
+			Close();
+			Open();
+			return con;
+		}
+	}
+	
 	public static void ConnectionClose() throws SQLException, ClassNotFoundException {
 		
-		con.close();
+		if(connectionStatus==1) {		
+			Close();
+		}
 	}
+	
 	
 
 }
