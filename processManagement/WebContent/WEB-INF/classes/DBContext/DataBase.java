@@ -43,7 +43,6 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 			for(UserProfileModel s:prf.GetUserProfileList())
 			{
 				System.out.println(s.getUserId()+" "+s.getUserProfileId()+" "+s.getName()+" "+s.getSurName()+" "+s.getPhone()+" "+s.getMail()+" "+s.getAddress());
-				
 			}	
 			
 			for(ModelUser s1:ur.getUserList())
