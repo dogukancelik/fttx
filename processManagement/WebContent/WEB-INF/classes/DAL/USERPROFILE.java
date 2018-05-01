@@ -4,12 +4,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import DBContext.CRUD;
+import model.ModelUser;
 import model.UserProfileModel;
 
 public class USERPROFILE {
 
 public	String[] model=new String[7];
-/* USERPROFILE(UserProfileModel m){
+private void model_doldur(UserProfileModel m){
 
 	model[0]=String.valueOf(m.getUserProfileId());
 	model[1]=String.valueOf(m.getUserId());
@@ -19,10 +20,7 @@ public	String[] model=new String[7];
 	model[5]=m.getPhone().toString();
 	model[6]=m.getAddress().toString();
 	
-	
-}*/
-
-
+}
 UserProfileModel profile=new UserProfileModel();
 CRUD cr=new CRUD();
 
@@ -49,5 +47,19 @@ public int Create(UserProfileModel model_) throws ClassNotFoundException, SQLExc
 	a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 	return a;
 }
+
+public int Edit (UserProfileModel model_)throws ClassNotFoundException, SQLException {
+	model_doldur(model_);
+	int a;
+	a=cr.Update(model_.ModelArrayString(), model, model_.GetModelName, model_.GetUserProfileId, String.valueOf(model_.getUserProfileId()));
+	return a;
+}
+public int Delete (UserProfileModel model)throws ClassNotFoundException, SQLException {
+
+	int a;
+	a=cr.Delete(model.GetModelName,model.GetUserProfileId ,String.valueOf(model.getUserProfileId()));
+	return a;
+}
+
 
 }

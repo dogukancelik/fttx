@@ -2,7 +2,6 @@ package DBContext;
 
 import java.sql.*;
 import com.mysql.jdbc.PreparedStatement;
-import com.oracle.tools.packager.RelativeFileSet.Type;
 import java.util.HashSet;
 import java.io.IOException;
 import java.util.ArrayList;

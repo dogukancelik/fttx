@@ -2,7 +2,7 @@ package model;
 
 public class UserProfileModel {
 	
-	public static String GetModelName="UserProfile";
+	public static String GetModelName="userprofile";
 	public static String GetUserProfileId="userProfileId";
 	public static String  GetUserId="userId";
 	public static String GetName="name";

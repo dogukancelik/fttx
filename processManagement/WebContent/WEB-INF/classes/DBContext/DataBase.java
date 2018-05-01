@@ -32,6 +32,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	//response.getWriter().append("Served at: ").append(request.getContextPath());
 		USER user=new USER();
 		USERPROFILE  prf=new USERPROFILE();
+		UserProfileModel  prf1=new UserProfileModel();
 		USER ur=new USER();
 		int a=0;
 		ModelUser us=new ModelUser();
@@ -43,29 +44,31 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 			for(UserProfileModel s:prf.GetUserProfileList())
 			{
 				System.out.println(s.getUserId()+" "+s.getUserProfileId()+" "+s.getName()+" "+s.getSurName()+" "+s.getPhone()+" "+s.getMail()+" "+s.getAddress());
+				prf1.setUserProfileId(s.getUserProfileId());
+				prf1.setAddress(s.getAddress().toString());
+				prf1.setMail(s.getMail().toString());
+				prf1.setName("Hami");
+				prf1.setPhone(s.getPhone().toString());
+				prf1.setSurName(s.getSurName().toString());
+				prf1.setUserId(s.getUserId());
 			}	
 			
-			for(ModelUser s1:ur.getUserList())
+			a=prf.Edit(prf1);
+			
+			for(UserProfileModel s1:prf.GetUserProfileList())
 			{
-				System.out.println(s1.getUserId()+" "+s1.getUserName()+" "+s1.getPassword()+" "+s1.getStatus());
+				System.out.println(s1.getUserId()+" "+s1.getUserProfileId()+" "+s1.getName()+" "+s1.getSurName()+" "+s1.getPhone()+" "+s1.getMail()+" "+s1.getAddress());
 				
-			}
-			try {
-				a=user.Delete(us);
+			}	
+			
+				} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	     }
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			     }
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
