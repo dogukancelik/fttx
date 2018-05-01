@@ -2,3 +2,10 @@
 /UserProfile.class
 /ModelUser.class
 /UserProfileModel.class
+/UserRoleModel.class
+/WorkDefinitionModel.class
+/RoleProcessModel.class
+/RoleModel.class
+/ProcessModel.class
+/ProcessOrderModel.class
+/ProcessStepModel.class
