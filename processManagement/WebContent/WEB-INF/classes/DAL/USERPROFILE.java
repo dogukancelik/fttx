@@ -42,6 +42,23 @@ public ArrayList<UserProfileModel> GetUserProfileList() throws ClassNotFoundExce
 }
 	return profileArray;
 	}
+public ArrayList<UserProfileModel> GetUserProfileListId(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException
+{
+	List<String[]> a= new ArrayList<String[]>();
+    ArrayList<UserProfileModel> profileArray =new ArrayList<UserProfileModel>();
+    a=cr.GetListId(profile.ModelArrayString(),profile.GetModelName,WhereItem,WhereValue);
+	for(String []  lst : a) {
+    profile.setUserProfileId(Integer.parseInt(lst[0].toString()));
+	profile.setUserId(Integer.parseInt(lst[1].toString()));	
+	profile.setName(lst[2].toString());
+	profile.setSurName(lst[3].toString());
+	profile.setMail(lst[4].toString());
+	profile.setPhone(lst[5].toString());
+	profile.setAddress(lst[6].toString());
+	profileArray.add(profile);
+}
+	return profileArray;
+	}
 public int Create(UserProfileModel model_) throws ClassNotFoundException, SQLException {
 	int a;
 	a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  

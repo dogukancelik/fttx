@@ -7,6 +7,25 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 public class CRUD   {
+	public List GetListId(String[] prm,String model,String wherePrmt,String wherevalue) throws ClassNotFoundException, SQLException {
+		String query="";
+		String queryString;
+		for(String pr:prm) {query += pr+",";}
+		       queryString="Select "+query.substring(0, query.length()-1)+" from "+model.toString()+"where "+wherePrmt.toString()+"="+wherevalue.toString();
+		       PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(queryString);
+				 ResultSet rs = psmt.executeQuery();
+				List sbn=new ArrayList<String>();
+					while(rs.next())
+				 {
+				 String [] str=new String[rs.getMetaData().getColumnCount()];
+				 for (int i = 1; i < rs.getMetaData().getColumnCount()+1 ; i++) {
+				 str[i-1]=rs.getString(i);
+				 }
+				 sbn.add(str);
+				 }			
+					dbContext.ConnectionClose();
+					return sbn;
+	   }
 public List GetList(String[] prm,String model) throws ClassNotFoundException, SQLException {
 	String query="";
 	String queryString;
