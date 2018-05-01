@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ProcessManagement</title>
+<base href="/processManagement/" >
 <link rel="stylesheet" href="css/default.css">
 <link rel="stylesheet" href="css/formElements.css">
 <link rel="stylesheet" href="css/font-awesome.css">
