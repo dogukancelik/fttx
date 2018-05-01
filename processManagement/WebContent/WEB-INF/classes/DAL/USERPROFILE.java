@@ -3,14 +3,25 @@ package DAL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.eclipse.jdt.internal.compiler.lookup.ProblemFieldBinding;
-
 import DBContext.CRUD;
-import model.ModelUser;
 import model.UserProfileModel;
 
 public class USERPROFILE {
+
+public	String[] model=new String[7];
+/* USERPROFILE(UserProfileModel m){
+
+	model[0]=String.valueOf(m.getUserProfileId());
+	model[1]=String.valueOf(m.getUserId());
+	model[2]=m.getName().toString();
+	model[3]=m.getSurName().toString();
+	model[4]=m.getMail().toString();
+	model[5]=m.getPhone().toString();
+	model[6]=m.getAddress().toString();
+	
+	
+}*/
+
 
 UserProfileModel profile=new UserProfileModel();
 CRUD cr=new CRUD();
@@ -33,4 +44,10 @@ public ArrayList<UserProfileModel> GetUserProfileList() throws ClassNotFoundExce
 }
 	return profileArray;
 	}
+public int Create(UserProfileModel model_) throws ClassNotFoundException, SQLException {
+	int a;
+	a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
+	return a;
+}
+
 }
