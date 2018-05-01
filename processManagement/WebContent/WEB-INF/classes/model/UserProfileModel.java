@@ -1,6 +1,15 @@
 package model;
 
-public class UserProfile {
+public class UserProfileModel {
+	
+	public static String GetModelName="UserProfile";
+	public static String GetUserProfileId="userProfileId";
+	public static String  GetUserId="userId";
+	public static String GetName="name";
+	public static String GetSurname="surname";
+	public static String GetMail="mail";
+	public static String GetPhone="phone";
+	public static String GetAddress="address";
 	private int userProfileId;
 	private int userId;
 	private String name;
@@ -9,8 +18,11 @@ public class UserProfile {
 	private String phone;
 	private String address;
 	
-	
-	//get functions
+	public String [] ModelArrayString() {
+		String [] a=new String[] {"userProfileId","userId","name","surname","mail","phone","address"};
+		
+		return a;
+	}
 	public int getUserProfileId() {
 		return userProfileId;
 	}
@@ -30,10 +42,9 @@ public class UserProfile {
 		return phone;
 	}
 	public String getAddress() {
+
 		return address;
 	}
-	
-	//set functions
 	public void setUserProfileId(int n) {
 		userProfileId = n;
 	}

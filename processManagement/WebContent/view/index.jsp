@@ -4,7 +4,7 @@
 
 <script type="text/javascript" src="js/calendar.js"></script>
 <link rel="stylesheet" href="css/calendar.css">
-
+<%@ page import="DAL.USER,model.ModelUser"  %>
 <div class="content">
 	<div class="contentItem" style="width:700px">
 		<div class="head"><i class="fa fa-user-circle"></i> My Calendar</div>
@@ -20,7 +20,20 @@
 			});
 			
 		</script>
+		<div>
+		<%
+	   USER user=new USER();
+		for(ModelUser st:user.getUserList()) 
+		{%>
+		   <%=st.getUserId() %>
+		   <%=st.getUserName()%>
+		   <%=st.getPassword()%> 
+		   <%=st.getStatus() %>
+		   
+		<%}%>
+	
 		
+		</div>
 	</div> 
 </div>
 
