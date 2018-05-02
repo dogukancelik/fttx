@@ -11,7 +11,7 @@ public class CRUD   {
 		String query="";
 		String queryString;
 		for(String pr:prm) {query += pr+",";}
-		       queryString="Select "+query.substring(0, query.length()-1)+" from "+model.toString()+"where "+wherePrmt.toString()+"="+wherevalue.toString();
+		       queryString="Select "+query.substring(0, query.length()-1)+" from "+model.toString()+" where "+wherePrmt.toString()+"="+wherevalue.toString();
 		       PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(queryString);
 				 ResultSet rs = psmt.executeQuery();
 				List sbn=new ArrayList<String>();

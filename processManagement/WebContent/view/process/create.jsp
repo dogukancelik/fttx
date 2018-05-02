@@ -2,38 +2,31 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="DAL.USER,model.ModelUser"  %>
+<%@ page import="model.ProcessModel"  %>
 
 <div class="content">
 	<div class="contentItem" style="width:450px">
-		<div class="head"><i class="fa fa-user-circle"></i> Users Create</div>
+		<div class="head"><i class="fa fa-tasks"></i> Process Create</div>
 		<form action="#" method="post">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
-					<td class="label1">UserName: </td>
+					<td class="label1">Process Name: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="username" class="input1"/></td>
-				</tr>
-				
-				<tr>
-					<td class="label1">Password: </td>
-				</tr>
-				<tr>
-					<td><input type="text" name="password" class="input1"/></td>
+					<td><input type="text" name="processName" class="input1"/></td>
 				</tr>
 				
 				<tr>
-					<td class="label1">Status: </td>
+					<td class="label1">Process Description: </td>
 				</tr>
 				<tr>
-					<td><input type="checkbox" name="status"/></td>
+					<td><input type="text" name="description" class="input1"/></td>
 				</tr>			
 				
 				<tr height="75"> 
 					<td colspan="2">
-						<a href="user/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
+						<a href="process/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
 						<input type="submit" value="Create" class="button1">
 					</td>
 				</tr>

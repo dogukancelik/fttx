@@ -50,3 +50,15 @@ textarea{
 	color:#127fad;
 	text-decoration:underline;
 }
+
+.select1{
+	font-family:Arial, Helvetica, sans-serif;
+	width: calc(100% - 5px);
+	height:30px;
+	border:1px solid #cccccc;
+	outline:none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding-left:5px;
+}

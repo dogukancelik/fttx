@@ -186,7 +186,160 @@
   <!-- 
   ############# USER DELETE ############### 
   -->
+  
+  
+  
+  <!-- 
+  ############# PROCESS INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processIndex</servlet-name>
+    <jsp-file>/view/process/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processIndex</servlet-name>
+    <url-pattern>/process/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS INDEX ############### 
+  -->
+  
+  
+  <!-- 
+  ############# PROCESS CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processCreate</servlet-name>
+    <jsp-file>/view/process/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processCreate</servlet-name>
+    <url-pattern>/process/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS CREATE ############### 
+-->
 
 
+
+ <!-- 
+  ############# PROCESS EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processEdit</servlet-name>
+    <jsp-file>/view/process/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processEdit</servlet-name>
+    <url-pattern>/process/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS EDIT ############### 
+  -->
+  
+  
+     <!-- 
+  ############# PROCESS DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processDelete</servlet-name>
+    <jsp-file>/view/process/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processDelete</servlet-name>
+    <url-pattern>/process/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS DELETE ############### 
+  -->
+  
+  
+   <!-- 
+  ############# PROCESS ORDER INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processOrderIndex</servlet-name>
+    <jsp-file>/view/processOrder/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processOrderIndex</servlet-name>
+    <url-pattern>/processOrder/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS ORDER INDEX ############### 
+  -->
+  
+  
+     <!-- 
+  ############# PROCESS ORDER CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processOrderCreate</servlet-name>
+    <jsp-file>/view/processOrder/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processOrderCreate</servlet-name>
+    <url-pattern>/processOrder/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS ORDER CREATE ############### 
+  -->
+  
+  
+  <!-- 
+  ############# PROCESS ORDER EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processOrderEdit</servlet-name>
+    <jsp-file>/view/processOrder/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processOrderEdit</servlet-name>
+    <url-pattern>/processOrder/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS ORDER EDIT ############### 
+  -->
+  
+
+
+ <!-- 
+  ############# PROCESS ORDER DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processOrderDelete</servlet-name>
+    <jsp-file>/view/processOrder/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processOrderDelete</servlet-name>
+    <url-pattern>/processOrder/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS ORDER DELETE ############### 
+  -->
 
 </web-app>

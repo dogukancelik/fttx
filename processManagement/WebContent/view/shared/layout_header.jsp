@@ -25,9 +25,9 @@
 	<div class="sep"></div>
 	<div class="leftMenu">
 		<ul>
-			<li><i class="fa fa-circle"></i> Item1</li>
-			<li><i class="fa fa-circle"></i> Item2</li>
-			<li><i class="fa fa-circle"></i> Item3</li>
+			<li><i class="fa fa-circle"></i> <a href="user/">User</a></li>
+			<li><i class="fa fa-circle"></i> <a href="process/">Process</a></li>
+			<li><i class="fa fa-circle"></i> <a href="processOrder/">Process Order</a></li>
 			<li><i class="fa fa-circle"></i> Item4</li>
 			<li><i class="fa fa-circle"></i> Item5</li>
 			<li><i class="fa fa-circle"></i> Item6</li>

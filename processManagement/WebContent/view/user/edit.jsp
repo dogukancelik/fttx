@@ -11,7 +11,6 @@ String ID = pathParts[pathParts.length-1];
 
 USER user = new USER();
 ModelUser u = new ModelUser();
-//u.setUserId(user.getUserListId("userId", ID).get(0).getUserId());
 for(ModelUser st:user.getUserListId("userId", ID)) 
 {
 	u.setUserId(st.getUserId());
@@ -26,6 +25,7 @@ for(ModelUser st:user.getUserListId("userId", ID))
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-user-circle"></i> Users Edit</div>
+		<form action="#" method="post">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -57,6 +57,7 @@ for(ModelUser st:user.getUserListId("userId", ID))
 				</tr>
 			</tbody>
 		</table>
+		</form>
 	</div>
 </div>
 
