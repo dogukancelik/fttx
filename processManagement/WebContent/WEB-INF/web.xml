@@ -341,5 +341,81 @@
   <!-- 
   ############# PROCESS ORDER DELETE ############### 
   -->
+  
+  
+  <!-- 
+  ############# PROCESS STEP INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processStepIndex</servlet-name>
+    <jsp-file>/view/processStep/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processStepIndex</servlet-name>
+    <url-pattern>/processStep/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS STEP INDEX ############### 
+  -->
+  
+  
+     <!-- 
+  ############# PROCESS STEP CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processStepCreate</servlet-name>
+    <jsp-file>/view/processStep/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processStepCreate</servlet-name>
+    <url-pattern>/processStep/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS STEP CREATE ############### 
+  -->
 
+
+
+  <!-- 
+  ############# PROCESS STEP EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processStepEdit</servlet-name>
+    <jsp-file>/view/processStep/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processStepEdit</servlet-name>
+    <url-pattern>/processStep/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS STEP EDIT ############### 
+  -->
+  
+  
+   <!-- 
+  ############# PROCESS STEP DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>processStepDelete</servlet-name>
+    <jsp-file>/view/processStep/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>processStepDelete</servlet-name>
+    <url-pattern>/processStep/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PROCESS STEP DELETE ############### 
+  -->
 </web-app>

@@ -16,7 +16,7 @@ ProcessOrderModel st = new ProcessOrderModel();
 
 <div class="content">
 	<div class="contentItem" style="width:800px">
-		<div class="head"><i class="fa fa-user-circle"></i> Process Order Delete</div>
+		<div class="head"><i class="fa fa-sort"></i> Process Order Delete</div>
 		<h2>Do you want to delete this process order ?</h2>
 		<div>Process Order ID: <b><%=st.getProcessOrderId() %></b></div>
 		<div>Process Order: <b><%=st.getProcessOrder()%></b></div>

@@ -10,7 +10,7 @@
 
 <div class="content">
 	<div class="contentItem" style="width:900px">
-		<div class="head"><i class="fa fa-sort-numeric-up"></i> Process Order List</div>
+		<div class="head"><i class="fa fa-sort"></i> Process Order List</div>
 		<div style="height:30px; line-height:30px">&nbsp<a class="a1" href="processOrder/create">Create New Process Order</a></div>
 		<table id="table_id" class="display">
 		    <thead>
