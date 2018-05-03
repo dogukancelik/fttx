@@ -29,12 +29,11 @@
 			<li><i class="fa fa-circle"></i> <a href="process/">Process</a></li>
 			<li><i class="fa fa-circle"></i> <a href="processOrder/">Process Order</a></li>
 			<li><i class="fa fa-circle"></i> <a href="processStep/">Process Step</a></li>
-			<li><i class="fa fa-circle"></i> Item5</li>
-			<li><i class="fa fa-circle"></i> Item6</li>
+			<li><i class="fa fa-circle"></i> <a href="role/">Role</a></li>
+			<li><i class="fa fa-circle"></i> <a href="roleProcess/">Role Process</a></li>
 			<li><i class="fa fa-circle"></i> Item7</li>
 			<li><i class="fa fa-circle"></i> Item8</li>
 			<li><i class="fa fa-circle"></i> Item9</li>
-			<li><i class="fa fa-circle"></i> Item10</li>
 		</ul>
 	</div>
 	

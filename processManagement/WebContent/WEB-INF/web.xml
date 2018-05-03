@@ -418,4 +418,159 @@
   <!-- 
   ############# PROCESS STEP DELETE ############### 
   -->
+  
+  
+  <!--
+  ############# ROLE INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleIndex</servlet-name>
+    <jsp-file>/view/role/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleIndex</servlet-name>
+    <url-pattern>/role/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE INDEX ############### 
+  -->
+  
+  
+  <!-- 
+  ############# ROLE CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleCreate</servlet-name>
+    <jsp-file>/view/role/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleCreate</servlet-name>
+    <url-pattern>/role/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE CREATE ############### 
+  -->
+
+
+
+  <!-- 
+  ############# ROLE EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleEdit</servlet-name>
+    <jsp-file>/view/role/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleEdit</servlet-name>
+    <url-pattern>/role/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE EDIT ############### 
+  -->
+  
+  
+   <!-- 
+  ############# ROLE DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleDelete</servlet-name>
+    <jsp-file>/view/role/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleDelete</servlet-name>
+    <url-pattern>/role/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE DELETE ############### 
+  -->
+  
+  
+  
+    <!--
+  ############# ROLE PROCESS INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleProcessIndex</servlet-name>
+    <jsp-file>/view/roleProcess/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleProcessIndex</servlet-name>
+    <url-pattern>/roleProcess/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE PROCESS INDEX ############### 
+  -->
+  
+  
+  <!-- 
+  ############# ROLE PROCESS CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleProcessCreate</servlet-name>
+    <jsp-file>/view/roleProcess/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleProcessCreate</servlet-name>
+    <url-pattern>/roleProcess/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE PROCESS CREATE ############### 
+  -->
+
+
+
+  <!-- 
+  ############# ROLE PROCESS EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleProcessEdit</servlet-name>
+    <jsp-file>/view/roleProcess/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleProcessEdit</servlet-name>
+    <url-pattern>/roleProcess/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE Process EDIT ############### 
+  -->
+  
+  
+   <!-- 
+  ############# ROLE PROCESS DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleProcessDelete</servlet-name>
+    <jsp-file>/view/roleProcess/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleProcessDelete</servlet-name>
+    <url-pattern>/roleProcess/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE PROCESS DELETE ############### 
+  -->
 </web-app>
