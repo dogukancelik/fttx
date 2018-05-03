@@ -66,6 +66,7 @@ public int Create(String[] prm,String[] prm3,String model) throws SQLException, 
 			  dbContext.ConnectionClose();
 					return rs;
 }
+
 public int Update(String[] prm,String[] prm3,String model,String valuesPrm, String values) throws ClassNotFoundException, SQLException {
     String query="";
 	String queryString;

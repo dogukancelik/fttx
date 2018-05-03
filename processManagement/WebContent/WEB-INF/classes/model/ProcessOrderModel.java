@@ -29,7 +29,7 @@ public class ProcessOrderModel {
 	public int getProcessOrder() {
 		return ProcessOrder;
 	}
-	public boolean getOrder() {
+	public boolean getProcessCheck() {
 		return ProcessCheck;
 	}
    	public void setProcessOrderId(int Po) {

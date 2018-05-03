@@ -2,7 +2,6 @@ package DAL;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import DBContext.CRUD;
 import model.ModelUser;
@@ -23,6 +22,7 @@ public ArrayList<ModelUser> getUserList() throws ClassNotFoundException, SQLExce
 	}
 	 return Users;
    }
+@SuppressWarnings("unchecked")
 public ArrayList<ModelUser> getUserListId(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException {
     List<String[]> a= new ArrayList<String[]>();
      ArrayList<ModelUser> Users=new ArrayList<ModelUser>();

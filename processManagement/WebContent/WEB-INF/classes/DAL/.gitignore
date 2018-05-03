@@ -1,2 +1,9 @@
 /USER.class
 /USERPROFILE.class
+/PROCESS.class
+/PROCESSORDER.class
+/PROCESSSTEP.class
+/ROLE.class
+/ROLEPROCESS.class
+/USERROLE.class
+/WORKDEFINITION.class
