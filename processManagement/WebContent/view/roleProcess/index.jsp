@@ -34,12 +34,12 @@
 		    	RoleProcessModel rpm = new RoleProcessModel();
 		    %>
 		        <tr align="center">
-		            <td><%=rpm.getRolePocessId() %></td>
+		            <td><%=rpm.getRoleProcessId() %></td>
 		            <td><%=rpm.getProcessId()%></td>
 		            <td><%=rpm.getRoleId()%> </td>
 		            <td>
-		            	<a class="a1" href="roleProcess/edit/<%=rpm.getRolePocessId() %>">Edit</a> |
-		            	<a class="a1" href="roleProcess/delete/<%=rpm.getRolePocessId() %>">Delete</a>
+		            	<a class="a1" href="roleProcess/edit/<%=rpm.getRoleProcessId() %>">Edit</a> |
+		            	<a class="a1" href="roleProcess/delete/<%=rpm.getRoleProcessId() %>">Delete</a>
 		            </td>
 		        </tr>
 		    <%%>

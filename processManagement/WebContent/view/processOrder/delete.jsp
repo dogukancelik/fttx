@@ -22,7 +22,7 @@ ProcessOrderModel st = new ProcessOrderModel();
 		<div>Process Order: <b><%=st.getProcessOrder()%></b></div>
 		<div>Process ID: <b><%=st.getProcessId()%></b></div>
 		<div>Work Definition: <b><%=st.getWorkDefinitionId()%></b></div>
-		<div>Order: <b><%=st.getOrder() %></b></div>
+		<div>Order: <b><%=st.getProcessCheck() %></b></div>
 		
 		<form action="#" method="post">
 		<div style="height:75px; line-height:75px">

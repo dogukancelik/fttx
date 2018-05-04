@@ -42,7 +42,7 @@
 		            <td><%=st.getProcessOrder()%></td>
 		            <td><%=st.getProcessId()%> </td>
 		            <td><%=st.getWorkDefinitionId()%> </td>
-		            <td><%=st.getOrder() %></td>
+		            <td><%=st.getProcessCheck() %></td>
 		            <td>
 		            	<a class="a1" href="processOrder/edit/<%=st.getProcessOrderId() %>">Edit</a> |
 		            	<a class="a1" href="processOrder/delete/<%=st.getProcessOrderId() %>">Delete</a>

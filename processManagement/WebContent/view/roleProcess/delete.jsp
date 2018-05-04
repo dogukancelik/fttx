@@ -16,7 +16,7 @@ RoleProcessModel rpm = new RoleProcessModel();
 	<div class="contentItem" style="width:800px">
 		<div class="head"><i class="fa fa-cubes"></i> Role Process Delete</div>
 		<h2>Do you want to delete this role process ?</h2>
-		<div>Role Process ID: <b><%=rpm.getRolePocessId() %></b></div>
+		<div>Role Process ID: <b><%=rpm.getRoleProcessId() %></b></div>
 		<div>Process ID: <b><%=rpm.getProcessId()%></b></div>
 		<div>Role ID: <b><%=rpm.getRoleId()%></b></div>
 		
