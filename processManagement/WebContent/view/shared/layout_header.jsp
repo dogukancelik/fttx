@@ -31,9 +31,8 @@
 			<li><i class="fa fa-circle"></i> <a href="processStep/">Process Step</a></li>
 			<li><i class="fa fa-circle"></i> <a href="role/">Role</a></li>
 			<li><i class="fa fa-circle"></i> <a href="roleProcess/">Role Process</a></li>
-			<li><i class="fa fa-circle"></i> Item7</li>
-			<li><i class="fa fa-circle"></i> Item8</li>
-			<li><i class="fa fa-circle"></i> Item9</li>
+			<li><i class="fa fa-circle"></i> <a href="userRole/">User Role</a></li>
+			<li><i class="fa fa-circle"></i> <a href="workDefinition/">Work Definition</a></li>
 		</ul>
 	</div>
 	

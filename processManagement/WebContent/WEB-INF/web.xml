@@ -573,4 +573,159 @@
   <!-- 
   ############# ROLE PROCESS DELETE ############### 
   -->
+  
+  
+ <!--
+  ############# USER ROLE INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>userRoleIndex</servlet-name>
+    <jsp-file>/view/userRole/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>userRoleIndex</servlet-name>
+    <url-pattern>/userRole/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# USER ROLE INDEX ############### 
+  -->
+  
+  
+  <!-- 
+  ############# USER ROLE CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>userRoleCreate</servlet-name>
+    <jsp-file>/view/userRole/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>userRoleCreate</servlet-name>
+    <url-pattern>/userRole/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# USER ROLE CREATE ############### 
+  -->
+
+
+
+  <!-- 
+  ############# USER ROLE EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>userRoleEdit</servlet-name>
+    <jsp-file>/view/userRole/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>userRoleEdit</servlet-name>
+    <url-pattern>/userRole/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# USER ROLE EDIT ############### 
+  -->
+  
+  
+   <!-- 
+  ############# USER ROLE DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>userRoleDelete</servlet-name>
+    <jsp-file>/view/userRole/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>userRoleDelete</servlet-name>
+    <url-pattern>/userRole/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# USER ROLE DELETE ############### 
+  -->
+  
+  
+  
+   <!--
+  ############# WORK DEFINITION INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>workDefinitionIndex</servlet-name>
+    <jsp-file>/view/workDefinition/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>workDefinitionIndex</servlet-name>
+    <url-pattern>/workDefinition/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# WORK DEFINITION INDEX ############### 
+  -->
+  
+  
+  <!-- 
+  ############# WORK DEFINITION CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>workDefinitionCreate</servlet-name>
+    <jsp-file>/view/workDefinition/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>workDefinitionCreate</servlet-name>
+    <url-pattern>/workDefinition/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# WORK DEFINITION CREATE ############### 
+  -->
+
+
+
+  <!-- 
+  ############# WORK DEFINITION EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>workDefinitionEdit</servlet-name>
+    <jsp-file>/view/workDefinition/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>workDefinitionEdit</servlet-name>
+    <url-pattern>/workDefinition/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# WORK DEFINITION EDIT ############### 
+  -->
+  
+  
+   <!-- 
+  ############# WORK DEFINITON DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>workDefinitionDelete</servlet-name>
+    <jsp-file>/view/workDefinition/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>workDefinitionDelete</servlet-name>
+    <url-pattern>/workDefinition/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# WORK DEFINITON DELETE ############### 
+  -->
 </web-app>
