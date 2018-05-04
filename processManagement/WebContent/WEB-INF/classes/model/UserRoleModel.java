@@ -25,7 +25,7 @@ public class UserRoleModel {
 	public int getRoleId() {
 		return RoleId;
 	}
-	public String getUserRolDesciription() {
+	public String getUserRoleDescription() {
 		return UserRolDesciription;
 	}
 	public void setUserRoleId(int n) {
@@ -38,7 +38,7 @@ public class UserRoleModel {
 	public void setRoleId(int  sName) {
 		RoleId = sName;
 	}
-	public void setUserRolDesciription(String sName) {
+	public void setUserRoleDescription(String sName) {
 		UserRolDesciription = sName;
 	}
 	

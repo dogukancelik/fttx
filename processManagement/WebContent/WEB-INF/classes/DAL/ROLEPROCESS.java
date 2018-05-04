@@ -1,9 +1,69 @@
 package DAL;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import DBContext.CRUD;
+import model.RoleProcessModel;
+
 public class ROLEPROCESS {
 
-	public ROLEPROCESS() {
-		// TODO Auto-generated constructor stub
+	public	String[] model=new String[3];
+	private void model_doldur(RoleProcessModel m){
+
+		model[0]=String.valueOf(m.getRoleProcessId());
+		model[1]=String.valueOf(m.getRoleId());
+		model[2]=String.valueOf(m.getProcessId());
 	}
+	RoleProcessModel roleProcess=new RoleProcessModel();
+	CRUD cr=new CRUD();
+
+	@SuppressWarnings("static-access")
+	public ArrayList<RoleProcessModel> GetroleProcessList() throws ClassNotFoundException, SQLException
+	{
+		List<String[]> a= new ArrayList<String[]>();
+	    ArrayList<RoleProcessModel> roleProcessArray =new ArrayList<RoleProcessModel>();
+	    a=cr.GetList(roleProcess.ModelArrayString(),roleProcess.GetModelName);
+		for(String []  lst : a) {
+	    roleProcess.setRoleProcessId(Integer.parseInt(lst[0].toString()));
+		roleProcess.setRoleId(Integer.parseInt(lst[1].toString()));
+		roleProcess.setProcessId(Integer.parseInt(lst[2].toString()));
+   roleProcessArray.add(roleProcess);
+	}
+		return roleProcessArray;
+		}
+	public ArrayList<RoleProcessModel> GetroleProcessList(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException
+	{
+		List<String[]> a= new ArrayList<String[]>();
+	    ArrayList<RoleProcessModel> roleProcessArray =new ArrayList<RoleProcessModel>();
+	    a=cr.GetListId(roleProcess.ModelArrayString(),roleProcess.GetModelName,WhereItem,WhereValue);
+		for(String []  lst : a) {
+			 roleProcess.setRoleProcessId(Integer.parseInt(lst[0].toString()));
+				roleProcess.setRoleId(Integer.parseInt(lst[1].toString()));
+				roleProcess.setProcessId(Integer.parseInt(lst[2].toString()));
+		roleProcessArray.add(roleProcess);
+	}
+		return roleProcessArray;
+		}
+	public int Create(RoleProcessModel model_) throws ClassNotFoundException, SQLException {
+		int a;
+		a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
+		return a;
+	}
+
+	public int Edit (RoleProcessModel model_)throws ClassNotFoundException, SQLException {
+		model_doldur(model_);
+		int a;
+		a=cr.Update(model_.ModelArrayString(), model, model_.GetModelName, model_.GetRoleProcessId, String.valueOf(model_.getRoleProcessId()));
+		return a;
+	}
+	public int Delete (RoleProcessModel model)throws ClassNotFoundException, SQLException {
+
+		int a;
+		a=cr.Delete(model.GetModelName,model.GetRoleProcessId ,String.valueOf(model.getRoleProcessId()));
+		return a;
+	}
+
 
 }

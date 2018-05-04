@@ -13,7 +13,7 @@ public class RoleProcessModel {
 		String [] a=new String[] {"RoleProcessId","RoleId","ProcessId"};
 		return a;
 	}
-	public int getRolePocessId() {
+	public int getRoleProcessId() {
 		return RolePocessId;
 	}
 	
@@ -24,7 +24,7 @@ public class RoleProcessModel {
 		return ProcessId;
 	}
 	
-	public void setRolePocessId(int n) {
+	public void setRoleProcessId(int n) {
 		RolePocessId = n;
 	}
 	
