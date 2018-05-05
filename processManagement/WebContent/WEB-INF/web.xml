@@ -728,4 +728,82 @@
   <!-- 
   ############# WORK DEFINITON DELETE ############### 
   -->
+  
+  
+  
+  <!--
+  ############# PLANNING INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>planningIndex</servlet-name>
+    <jsp-file>/view/planning/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>planningIndex</servlet-name>
+    <url-pattern>/planning/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PLANNING INDEX ############### 
+  -->
+  
+  
+  <!-- 
+  ############# PLANNING CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>planningCreate</servlet-name>
+    <jsp-file>/view/planning/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>planningCreate</servlet-name>
+    <url-pattern>/planning/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PLANNING CREATE ############### 
+  -->
+
+
+
+  <!-- 
+  ############# PLANNING EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>planningEdit</servlet-name>
+    <jsp-file>/view/planning/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>planningEdit</servlet-name>
+    <url-pattern>/planning/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PLANNING EDIT ############### 
+  -->
+  
+  
+   <!-- 
+  ############# PLANNING DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>planningDelete</servlet-name>
+    <jsp-file>/view/planning/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>planningDelete</servlet-name>
+    <url-pattern>/planning/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# PLANNING DELETE ############### 
+  -->
 </web-app>

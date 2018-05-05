@@ -34,6 +34,7 @@
 			<li><i class="fa fa-circle"></i> <a href="roleProcess/">Role Process</a></li>
 			<li><i class="fa fa-circle"></i> <a href="userRole/">User Role</a></li>
 			<li><i class="fa fa-circle"></i> <a href="workDefinition/">Work Definition</a></li>
+			<li><i class="fa fa-circle"></i> <a href="planning/">Planning</a></li>
 		</ul>
 	</div>
 	
