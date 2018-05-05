@@ -59,7 +59,7 @@
 					<td colspan="2" class="label1">Password: </td>
 				</tr>
 				<tr>
-					<td colspan="2"><a href="?action=passwordChange" class="a1">Change My Password</a></td>
+					<td colspan="2"><a href="myAccount?action=passwordChange" class="a1">Change My Password</a></td>
 				</tr>
 				
 				<tr height="75">
