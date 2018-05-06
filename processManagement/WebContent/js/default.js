@@ -41,3 +41,20 @@ function setCookie(name, value, exp) {
     var expires = "expires="+ d.toUTCString();
     document.cookie = name + "=" + value + ";" + exp + ";path=/";
 }
+
+function validate(elm){
+	var x=0;
+	for(var i=0;i<elm.length-1;i++){
+		if(elm[i].value==""){
+			$("#"+elm[i].name+"Val").html(elm[i].name+" Connot Be Empty !");
+			x++;
+		}
+		else{
+			$("#"+elm[i].name+"Val").html("");
+		}
+	}
+	
+	if(x>0){
+		return false;
+	}
+}
