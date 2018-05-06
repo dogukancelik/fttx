@@ -27,6 +27,7 @@
 				<tr height="75"> 
 					<td colspan="2">
 						<a href="process/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
+						<input type="hidden" name="actions" value="PROCESS,create">
 						<input type="submit" value="Create" class="button1">
 					</td>
 				</tr>

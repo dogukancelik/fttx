@@ -52,6 +52,7 @@ for(ModelUser st:user.getUserListId("userId", ID))
 				<tr height="75"> 
 					<td colspan="2">
 						<a href="user/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
+						<input type="hidden" name="actions" value="USER,edit">
 						<input type="submit" value="Edit" class="button1">
 					</td>
 				</tr>

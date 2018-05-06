@@ -36,6 +36,7 @@ WorkDefinitionModel wdm = new WorkDefinitionModel();
 				<tr height="75"> 
 					<td colspan="2">
 						<a href="workDefinition/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
+						<input type="hidden" name="actions" value="WORKDEFINITION,edit">
 						<input type="submit" value="Edit" class="button1">
 					</td>
 				</tr>
