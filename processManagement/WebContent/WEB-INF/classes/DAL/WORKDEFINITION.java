@@ -38,7 +38,7 @@ public class WORKDEFINITION {
 	{
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<WorkDefinitionModel> workdefinition =new ArrayList<WorkDefinitionModel>();
-	    a=cr.GetListId(WorkDefinitionModel.ModelArrayString(),WorkDefinitionModel.GetModelName,WhereItem,WhereValue);
+	    a=cr.GetListId(WorkDefinitionModel.ModelArrayString(),WorkDefinitionModel.GetModelName,WhereItem,WhereValue,null);
 		for(String []  lst : a) {
 			WorkDefinitionModel.setWorkDefinitionId(Integer.parseInt(lst[0].toString()));
 			WorkDefinitionModel.setWorkDefinitionName(lst[0].toString());

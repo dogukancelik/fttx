@@ -26,7 +26,7 @@ public ArrayList<ModelUser> getUserList() throws ClassNotFoundException, SQLExce
 public ArrayList<ModelUser> getUserListId(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException {
     List<String[]> a= new ArrayList<String[]>();
      ArrayList<ModelUser> Users=new ArrayList<ModelUser>();
-    a=cr.GetListId(new String [] {ModelUser.GetUserId,ModelUser.GetUsername,ModelUser.GetPassword,ModelUser.GetStatus},ModelUser.GetModel,WhereItem,WhereValue);
+    a=cr.GetListId(new String [] {ModelUser.GetUserId,ModelUser.GetUsername,ModelUser.GetPassword,ModelUser.GetStatus},ModelUser.GetModel,WhereItem,WhereValue,null);
 	for(String []  lst : a) {
 	ModelUser user=new ModelUser();
 	user.setUserId(Integer.parseInt(lst[0].toString()));

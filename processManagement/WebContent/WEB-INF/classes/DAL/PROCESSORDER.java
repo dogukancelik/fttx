@@ -42,7 +42,7 @@ public class PROCESSORDER {
 	{
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<ProcessOrderModel> processArray =new ArrayList<ProcessOrderModel>();
-	    a=cr.GetListId(processOrder.ModelArrayString(),processOrder.GetModelName,WhereItem,WhereValue);
+	    a=cr.GetListId(processOrder.ModelArrayString(),processOrder.GetModelName,WhereItem,WhereValue,null);
 		for(String []  lst : a) {
 			processOrder.setProcessOrderId(Integer.parseInt(lst[0].toString()));
 			processOrder.setWorkDefinitionId(Integer.parseInt(lst[1].toString()));

@@ -22,7 +22,7 @@ public class USERROLE {
 	CRUD cr=new CRUD();
 
 	@SuppressWarnings("static-access")
-	public ArrayList<UserRoleModel> GetroleList() throws ClassNotFoundException, SQLException
+	public ArrayList<UserRoleModel> GetRoleList() throws ClassNotFoundException, SQLException
 	{
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<UserRoleModel> UserroleArray =new ArrayList<UserRoleModel>();
@@ -36,11 +36,11 @@ public class USERROLE {
 	}
 		return UserroleArray;
 		}
-	public ArrayList<UserRoleModel> GetroleList(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException
+	public ArrayList<UserRoleModel> GetRoleList(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException
 	{
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<UserRoleModel> UserroleArray =new ArrayList<UserRoleModel>();
-	    a=cr.GetListId(UserRoleModel.ModelArrayString(),UserRoleModel.GetModelName,WhereItem,WhereValue);
+	    a=cr.GetListId(UserRoleModel.ModelArrayString(),UserRoleModel.GetModelName,WhereItem,WhereValue,null);
 		for(String []  lst : a) {
 			UserRoleModel.setUserRoleId(Integer.parseInt(lst[0].toString()));
 			UserRoleModel.setUserId(Integer.parseInt(lst[1].toString()));

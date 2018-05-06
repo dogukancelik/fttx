@@ -43,7 +43,7 @@ public class PROCESSSTEP {
 	{
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<ProcessStepModel> processStepArray =new ArrayList<ProcessStepModel>();
-	    a=cr.GetListId(processStep.ModelArrayString(),processStep.GetModelName,WhereItem,WhereValue);
+	    a=cr.GetListId(processStep.ModelArrayString(),processStep.GetModelName,WhereItem,WhereValue,null);
 		for(String []  lst : a) {
 			processStep.setProcessStepId(Integer.parseInt(lst[0].toString()));
 			processStep.setUserId(Integer.parseInt(lst[1].toString()));

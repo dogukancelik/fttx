@@ -46,7 +46,7 @@ public ArrayList<UserProfileModel> GetUserProfileListId(String WhereItem,String 
 {
 	List<String[]> a= new ArrayList<String[]>();
     ArrayList<UserProfileModel> profileArray =new ArrayList<UserProfileModel>();
-    a=cr.GetListId(profile.ModelArrayString(),profile.GetModelName,WhereItem,WhereValue);
+    a=cr.GetListId(profile.ModelArrayString(),profile.GetModelName,WhereItem,WhereValue,null);
 	for(String []  lst : a) {
     profile.setUserProfileId(Integer.parseInt(lst[0].toString()));
 	profile.setUserId(Integer.parseInt(lst[1].toString()));	

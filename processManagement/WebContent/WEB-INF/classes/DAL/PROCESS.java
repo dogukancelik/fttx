@@ -38,7 +38,7 @@ public class PROCESS {
 	{
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<ProcessModel> processArray =new ArrayList<ProcessModel>();
-	    a=cr.GetListId(process.ModelArrayString(),process.GetModelName,WhereItem,WhereValue);
+	    a=cr.GetListId(process.ModelArrayString(),process.GetModelName,WhereItem,WhereValue,null);
 		for(String []  lst : a) {
 			  process.setProcessId(Integer.parseInt(lst[0].toString()));
 				process.setProcessName(lst[1].toString());

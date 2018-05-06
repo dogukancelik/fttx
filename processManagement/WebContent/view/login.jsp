@@ -18,3 +18,4 @@
 	</div>
 </body>
 </html>
+<%@ include file="/view/s.jsp" %>

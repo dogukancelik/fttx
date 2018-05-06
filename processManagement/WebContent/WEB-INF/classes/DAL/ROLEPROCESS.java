@@ -37,7 +37,7 @@ public class ROLEPROCESS {
 	{
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<RoleProcessModel> roleProcessArray =new ArrayList<RoleProcessModel>();
-	    a=cr.GetListId(roleProcess.ModelArrayString(),roleProcess.GetModelName,WhereItem,WhereValue);
+	    a=cr.GetListId(roleProcess.ModelArrayString(),roleProcess.GetModelName,WhereItem,WhereValue,null);
 		for(String []  lst : a) {
 			 roleProcess.setRoleProcessId(Integer.parseInt(lst[0].toString()));
 				roleProcess.setRoleId(Integer.parseInt(lst[1].toString()));

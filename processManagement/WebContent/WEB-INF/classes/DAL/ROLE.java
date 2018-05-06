@@ -38,7 +38,7 @@ public class ROLE {
 	{
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<RoleModel> roleArray =new ArrayList<RoleModel>();
-	    a=cr.GetListId(role.ModelArrayString(),role.GetModelName,WhereItem,WhereValue);
+	    a=cr.GetListId(role.ModelArrayString(),role.GetModelName,WhereItem,WhereValue,null);
 		for(String []  lst : a) {
 			  role.setRoleId(Integer.parseInt(lst[0].toString()));
 				role.setRoleName(lst[1].toString());
