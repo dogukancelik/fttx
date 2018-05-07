@@ -3,11 +3,28 @@ package DAL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import DBContext.CRUD;
 import model.ModelUser;
 import model.UserProfileModel;
 
 public class USERPROFILE {
+
+	
+public UserProfileModel modeldoldur (HttpServletRequest s)
+{
+	UserProfileModel us =new UserProfileModel();
+	
+	us.setUserProfileId(Integer.parseInt(s.getParameter(us.GetUserProfileId)!=null?s.getParameter(us.GetUserProfileId):"0"));
+	us.setUserId(Integer.parseInt(s.getParameter(us.GetUserId)!=null?s.getParameter(us.GetUserId):"0"));
+	us.setName(s.getParameter(us.GetMail));
+	us.setSurName(s.getParameter(us.GetSurname));
+	us.setMail(s.getParameter(us.GetMail));
+	us.setPhone(s.getParameter(us.GetPhone));
+	us.setAddress(s.getParameter(us.GetAddress));
+	return us;
+}
 
 public	String[] model=new String[7];
 private void model_doldur(UserProfileModel m){
@@ -42,11 +59,11 @@ public ArrayList<UserProfileModel> GetUserProfileList() throws ClassNotFoundExce
 }
 	return profileArray;
 	}
-public ArrayList<UserProfileModel> GetUserProfileListId(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException
+public ArrayList<UserProfileModel> GetUserProfileListId(String WhereItem,String WhereValue,String kosul) throws ClassNotFoundException, SQLException
 {
 	List<String[]> a= new ArrayList<String[]>();
     ArrayList<UserProfileModel> profileArray =new ArrayList<UserProfileModel>();
-    a=cr.GetListId(profile.ModelArrayString(),profile.GetModelName,WhereItem,WhereValue,null);
+    a=cr.GetListId(profile.ModelArrayString(),profile.GetModelName,WhereItem.toString(),WhereValue.toString(),kosul.toString());
 	for(String []  lst : a) {
     profile.setUserProfileId(Integer.parseInt(lst[0].toString()));
 	profile.setUserId(Integer.parseInt(lst[1].toString()));	
@@ -60,7 +77,7 @@ public ArrayList<UserProfileModel> GetUserProfileListId(String WhereItem,String 
 	return profileArray;
 	}
 public int Create(UserProfileModel model_) throws ClassNotFoundException, SQLException {
-	int a;
+	int a;	model_doldur(model_);
 	a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 	return a;
 }

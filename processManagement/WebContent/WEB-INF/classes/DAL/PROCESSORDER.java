@@ -4,7 +4,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import DBContext.CRUD;
+import model.ModelUser;
 import model.ProcessOrderModel;
 
 public class PROCESSORDER {
@@ -18,6 +21,16 @@ public class PROCESSORDER {
 		model[0]=String.valueOf(m.getProcessOrder());
 		model[0]=String.valueOf(String.valueOf(m.getProcessCheck()));
 		}
+	public ProcessOrderModel modeldoldur (HttpServletRequest s)
+	{
+		ProcessOrderModel us =new ProcessOrderModel();
+		us.setProcessCheck(Boolean.parseBoolean(s.getParameter(us.GetCheck)));
+		us.setProcessId(Integer.parseInt(s.getParameter(us.GetProcessId)!=null?s.getParameter(us.GetProcessId):"0"));
+		us.setProcessOrder(Integer.parseInt(s.getParameter(us.GetOrder)!=null?s.getParameter(us.GetOrder):"0"));
+		us.setProcessOrderId(Integer.parseInt(s.getParameter(us.GetProcessOrderId)!=null?s.getParameter(us.GetProcessOrderId):"0"));
+		us.setWorkDefinitionId(Integer.parseInt(s.getParameter(us.GetWorkDefinitionId)!=null?s.getParameter(us.GetWorkDefinitionId):"0"));
+		return us;
+	}
 	ProcessOrderModel processOrder=new ProcessOrderModel();
 	CRUD cr=new CRUD();
 
@@ -54,7 +67,7 @@ public class PROCESSORDER {
 		return processArray;
 		}
 	public int Create(ProcessOrderModel model_) throws ClassNotFoundException, SQLException {
-		int a;
+		int a;	model_doldur(model_);
 		a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 		return a;
 	}

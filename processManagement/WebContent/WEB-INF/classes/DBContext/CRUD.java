@@ -11,18 +11,23 @@ public class CRUD   {
 		String query="";
 		String queryString;
 		for(String pr:prm) {query += pr+",";}
-		       queryString="Select "+query.substring(0, query.length()-1)+" from "+model.toString()+" where "+wherePrmt.toString()+"="+wherevalue.toString()+" "+kosul.toString(); ;
-		       PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(queryString);
+		
+		if(kosul=="") {      queryString="Select "+query.substring(0, query.length()-1)+" from "+model.toString()+" where "+wherePrmt.toString()+"='"+wherevalue.toString()+"'"; 
+		}else {queryString="Select "+query.substring(0, query.length()-1)+" from "+model.toString()+" where "+wherePrmt.toString()+"='"+wherevalue.toString()+"' "+kosul.toString(); 
+	       }
+		       System.out.println(queryString);
+				PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(queryString);
 				 ResultSet rs = psmt.executeQuery();
 				List sbn=new ArrayList<String>();
-					while(rs.next())
+				if(!rs.wasNull()) {
+				while(rs.next())
 				 {
 				 String [] str=new String[rs.getMetaData().getColumnCount()];
 				 for (int i = 1; i < rs.getMetaData().getColumnCount()+1 ; i++) {
 				 str[i-1]=rs.getString(i);
 				 }
 				 sbn.add(str);
-				 }			
+				 }			}
 					dbContext.ConnectionClose();
 					return sbn;
 	   }
@@ -49,18 +54,26 @@ public int Create(String[] prm,String[] prm3,String model) throws SQLException, 
 	String query="";
 	String queryString;
 	String valu="";
-	int i=0;
+
+	int s=0;
 	for(String pr:prm)
 	{
-	query += pr+",";
+	if(s>0) {
+		query += pr+",";
 	valu+="?,";
+	} s++;
 	}
 	      queryString="INSERT INTO `"+model.toString()+"` ("+query.substring(0, query.length()-1)+") VALUE ("+valu.substring(0,	valu.length()-1)+")";
+	      System.out.println(queryString);
 	     	 PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(queryString);
-			 for(String pr2:prm3)
+	     	int i=0;
+	     	 for(String pr2:prm3)
 				{
-				i++;
-				psmt.setString(i,pr2.toString());
+				
+				if(i>0) {
+					psmt.setString(i,pr2.toString());
+					}
+	     	 		i++;
 				}
 			 int rs =psmt.executeUpdate();
 			  dbContext.ConnectionClose();

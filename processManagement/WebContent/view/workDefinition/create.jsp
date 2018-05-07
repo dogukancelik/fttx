@@ -7,21 +7,21 @@
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-th"></i> Work Definiton Create</div>
-		<form action="#" method="post">
+		<form action="/processManagement/t" method="post">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
 					<td class="label1">Definiton Name: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="definitonname" class="input1"/></td>
+					<td><input type="text" name="WorkDefinitionName" class="input1"/></td>
 				</tr>
 				
 				<tr>
 					<td class="label1">Description: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="description" class="input1"/></td>
+					<td><input type="text" name="WorkDefinitionDescription" class="input1"/></td>
 				</tr>
 							
 				

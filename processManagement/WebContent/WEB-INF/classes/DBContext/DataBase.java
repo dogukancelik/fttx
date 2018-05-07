@@ -13,13 +13,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-
-
+import javax.servlet.http.HttpSession;
 
 import model.ModelUser;
 import model.UserProfileModel;
+import model.WorkDefinitionModel;
 import DAL.USERPROFILE;
+import DAL.WORKDEFINITION;
 import DAL.USER;
 @WebServlet("/DataBase")
 public class DataBase extends HttpServlet {
@@ -33,15 +33,32 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		USER user=new USER();
 		USERPROFILE  prf=new USERPROFILE();
 		UserProfileModel  prf1=new UserProfileModel();
-		USER ur=new USER();
+		WORKDEFINITION  wr=new WORKDEFINITION();
+		WorkDefinitionModel wrk=new WorkDefinitionModel();
 		int a=0;
 		ModelUser us=new ModelUser();
-		us.setUserId(3);
-		us.setUserName("hami");	
-		us.setPassword("1");
-		us.setStatus(Byte.parseByte("0"));
+		
+		HttpSession aa= request.getSession();
+		
+		
 		try {
-			for(UserProfileModel s:prf.GetUserProfileList())
+		
+			
+			wrk=wr.modeldoldur(request);
+			System.out.println(wrk.getWorkDefinitionName());
+			int dc=wr.Create(wrk);
+			System.out.println(wrk);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	/*	try {
+			for(UserProfileModel s:prf.GetUserProfileListId("surname","corakli"," and phone='111'"))
 			{
 				System.out.println(s.getUserId()+" "+s.getUserProfileId()+" "+s.getName()+" "+s.getSurName()+" "+s.getPhone()+" "+s.getMail()+" "+s.getAddress());
 				prf1.setUserProfileId(s.getUserProfileId());
@@ -67,7 +84,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 			} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
+				}*/
 			     }
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);

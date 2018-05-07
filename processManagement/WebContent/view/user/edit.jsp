@@ -11,7 +11,7 @@ String ID = pathParts[pathParts.length-1];
 
 USER user = new USER();
 ModelUser u = new ModelUser();
-for(ModelUser st:user.getUserListId("userId", ID)) 
+for(ModelUser st:user.getUserListId("userId", ID,"")) 
 {
 	u.setUserId(st.getUserId());
 	u.setUserName(st.getUserName());

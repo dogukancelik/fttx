@@ -13,11 +13,13 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAL.CONTROLLER;
 import DAL.ROLECONTROLLER;
 import DAL.USERROLE;
 import model.ControllerModel;
+import model.ModelUser;
 import model.RoleControllerModel;
 import model.UserRoleModel;
 
@@ -32,7 +34,7 @@ import model.UserRoleModel;
 		}
 					, 
 		urlPatterns = { 
-				"/RoleFilter", 
+				""
 				
 		})
 public class RoleFilter implements Filter {
@@ -56,12 +58,17 @@ public class RoleFilter implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
+
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
-	String controllerName;
+/*		final HttpSession session = ((HttpServletRequest) request).getSession();
+		String controllerName;
 		String actionname;
 		String UserId;
+		ModelUser mode=new ModelUser();
+		
+		System.out.println(mode.getUserName());
 if(!((HttpServletRequest)request).getRequestURI().equals("/processManagement/login")) {
 	
 	if	(request.getParameter("controllerName")!=null) {
@@ -74,7 +81,7 @@ if(!((HttpServletRequest)request).getRequestURI().equals("/processManagement/log
 			actionname="index";
 			UserId="1";
 		}
-		USERROLE userrole=new USERROLE();
+		 USERROLE userrole=new USERROLE();
 		 ROLECONTROLLER rocont=new ROLECONTROLLER();
 		 CONTROLLER controller= new CONTROLLER();
 		 ControllerModel contmodel=new ControllerModel();
@@ -84,10 +91,10 @@ if(!((HttpServletRequest)request).getRequestURI().equals("/processManagement/log
         UserId=((HttpServletRequest)request).getSession().getAttribute("UserId").toString();
 			
 		try {
-		String contID=String.valueOf(controller.GetcontrolList(contmodel.GetControllerName,controllerName,"ActionName="+actionname).get(0).getControllerId());
+		String contID=String.valueOf(controller.GetcontrolList(contmodel.GetControllerName,controllerName,"ActionName='"+actionname+"'").get(0).getControllerId());
 		String RoleID=String.valueOf(userrole.GetRoleList(usermodel.GetRoleId, UserId).get(0).getUserRoleId());
 		System.out.println(rocont.GetcontrolList(rolcontrmodel.GetControllerId,contID," and RoleId "+ RoleID).get(0).getControlerId());
-		if(	rocont.GetcontrolList(rolcontrmodel.GetControllerId,contID," and RoleId "+ RoleID).get(0).getControlerId()!=0)
+		if(	rocont.GetcontrolList(rolcontrmodel.GetControllerId,contID," and RoleId=' "+ RoleID+"'").get(0).getControlerId()!=0)
 		{
 			chain.doFilter(request, response);
 			
@@ -105,7 +112,7 @@ if(!((HttpServletRequest)request).getRequestURI().equals("/processManagement/log
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-}else { chain.doFilter(request, response); }
+}else { chain.doFilter(request, response); }*/
 	
 		// pass the request along the filter chain
 		}

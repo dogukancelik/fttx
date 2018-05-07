@@ -4,8 +4,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import DBContext.CRUD;
 import model.ControllerModel;
+import model.UserProfileModel;
 
 public class CONTROLLER {
 
@@ -18,6 +21,16 @@ public class CONTROLLER {
 		model[3]=m.getActionName().toString();
 		
 	}
+	public ControllerModel modeldoldur (HttpServletRequest s)
+	{
+		ControllerModel us =new ControllerModel();
+		us.setActionName(s.getParameter(us.GetActionName));
+		us.setControllerId(Integer.parseInt(s.getParameter(us.GetControllerId)!=null ? s.getParameter(us.GetControllerId):"0"));
+		us.setControllerName(s.getParameter(us.getControllerName()));
+		us.setSubControllerId(Integer.parseInt(s.getParameter(us.GetSubControllerId)!=null ?s.getParameter(us.GetSubControllerId):"0"));
+		return us;
+	}
+	
 	ControllerModel control=new ControllerModel();
 	CRUD cr=new CRUD();
 
@@ -52,6 +65,7 @@ public class CONTROLLER {
 		}
 	public int Create(ControllerModel model_) throws ClassNotFoundException, SQLException {
 		int a;
+		model_doldur(model_);
 		a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 		return a;
 	}

@@ -4,7 +4,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import DBContext.CRUD;
+import model.RoleProcessModel;
 import model.UserRoleModel;
 
 public class USERROLE {
@@ -18,6 +21,18 @@ public class USERROLE {
 		model[2]=m.getUserRoleDescription().toString();
 		
 	}
+	public UserRoleModel modeldoldur (HttpServletRequest s)
+	{
+		UserRoleModel us =new UserRoleModel();
+		
+		us.setRoleId(Integer.parseInt(s.getParameter(us.GetRoleId)!=null?s.getParameter(us.GetRoleId):"0"));
+		us.setUserId(Integer.parseInt(s.getParameter(us.GetUserId)!=null?s.getParameter(us.GetUserId):"0"));
+		us.setUserRoleDescription(s.getParameter(us.GetUserRolDesciription));
+		us.setUserRoleId(Integer.parseInt(s.getParameter(us.GetUserRoleId)!=null?s.getParameter(us.GetUserRoleId):"0"));
+		
+		return us;
+	}
+	
 	UserRoleModel UserRoleModel=new UserRoleModel();
 	CRUD cr=new CRUD();
 
@@ -51,7 +66,7 @@ public class USERROLE {
 		return UserroleArray;
 		}
 	public int Create(UserRoleModel model_) throws ClassNotFoundException, SQLException {
-		int a;
+		int a;	model_doldur(model_);
 		a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 		return a;
 	}

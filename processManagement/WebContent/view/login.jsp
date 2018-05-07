@@ -11,7 +11,7 @@
 
 <body style="background-color:#025670;">
 	<div class="login-form">
-    <form action="test" method="post" onsubmit="return validate(this)">
+    <form action="index" method="post" onsubmit="return validate(this)">
     	<div class="login-form-header">User Login</div>
         <img class="login-form-img" src="img/u.png"/>
 		<input type="text" name="username" class="form-input" style="background: url(img/user.png) no-repeat 10px 6px ;" placeholder="UserName"/>

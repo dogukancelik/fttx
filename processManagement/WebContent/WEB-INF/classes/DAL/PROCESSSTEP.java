@@ -4,12 +4,24 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import DBContext.CRUD;
+import model.ProcessOrderModel;
 import model.ProcessStepModel;
 
 public class PROCESSSTEP {
 
 	public	String[] model=new String[4];
+	public ProcessStepModel modeldoldur (HttpServletRequest s)
+	{
+		ProcessStepModel us =new ProcessStepModel();
+		us.setProcessDate(s.getParameter(us.GetProcessDate));
+		us.setProcessId(Integer.parseInt(s.getParameter(us.GetProcess)!=null?s.getParameter(us.GetProcess):"0"));
+		us.setProcessStepId(Integer.parseInt(s.getParameter(us.GetProcessStepId)!=null?s.getParameter(us.GetProcessStepId):"0"));
+		us.setUserId(Integer.parseInt(s.getParameter(us.GetUserId)!=null?s.getParameter(us.GetUserId):"0"));
+		return us;
+	}
 	private void model_doldur(ProcessStepModel m){
 
 		model[0]=String.valueOf(m.getProcessStepId());
@@ -55,7 +67,7 @@ public class PROCESSSTEP {
 		return processStepArray;
 		}
 	public int Create(ProcessStepModel model_) throws ClassNotFoundException, SQLException {
-		int a;
+		int a;	model_doldur(model_);
 		a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 		return a;
 	}

@@ -7,7 +7,7 @@
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-user-circle"></i> Users Create</div>
-		<form action="#" method="post">
+		<form action="/processManagement/t" method="post">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -28,7 +28,7 @@
 					<td class="label1">Status: </td>
 				</tr>
 				<tr>
-					<td><input type="checkbox" name="status"/></td>
+					<td><input type="checkbox" name="status" /></td>
 				</tr>			
 				
 				<tr height="75"> 

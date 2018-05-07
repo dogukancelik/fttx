@@ -4,7 +4,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import DBContext.CRUD;
+import model.RoleProcessModel;
 import model.WorkDefinitionModel;;
 
 public class WORKDEFINITION {
@@ -17,6 +20,18 @@ public class WORKDEFINITION {
 		model[2]=m.getWorkDefinitionDesciription().toString();
 		
 	}
+	
+	public WorkDefinitionModel modeldoldur (HttpServletRequest s)
+	{
+		WorkDefinitionModel us =new WorkDefinitionModel();
+ 
+		us.setWorkDefinitionDesciription(s.getParameter(us.GetWorkDefinitionDesciription));
+		us.setWorkDefinitionId(Integer.parseInt(s.getParameter(us.GetWorkDefinitionId)!=null?s.getParameter(us.GetWorkDefinitionId):"0"));
+		us.setWorkDefinitionName(s.getParameter(us.GetWorkDefinitionName));
+
+		return us;
+	}
+	
 	WorkDefinitionModel WorkDefinitionModel=new WorkDefinitionModel();
 	CRUD cr=new CRUD();
 
@@ -48,8 +63,9 @@ public class WORKDEFINITION {
 		return workdefinition;
 		}
 	public int Create(WorkDefinitionModel model_) throws ClassNotFoundException, SQLException {
+		model_doldur(model_);
 		int a;
-		a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
+			a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 		return a;
 	}
 

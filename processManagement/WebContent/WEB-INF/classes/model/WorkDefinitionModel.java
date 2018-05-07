@@ -5,13 +5,13 @@ public class WorkDefinitionModel{
 	public static String GetModelName="workdefinition";
 	public static String GetWorkDefinitionId="WorkDefinitionId";
 	public static String GetWorkDefinitionName="WorkDefinitionName";
-	public static String GetWorkDefinitionDesciription="WorkDefinitionDesciription";
+	public static String GetWorkDefinitionDesciription="WorkDefinitionDescription";
 	private  int WorkDefinitionId;
 	private  String WorkDefinitionName;
 	private  String WorkDefinitionDesciription;
 	
 	public String [] ModelArrayString() {
-		String [] a=new String[] {"WorkDefinitionId","WorkDefinitionName","WorkDefinitionDesciription"};
+		String [] a=new String[] {"WorkDefinitionId","WorkDefinitionName","WorkDefinitionDescription"};
 		return a;
 	}
 	public int getWorkDefinitionId() {

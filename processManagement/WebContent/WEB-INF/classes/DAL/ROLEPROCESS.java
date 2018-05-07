@@ -4,12 +4,23 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import DBContext.CRUD;
+import model.RoleControllerModel;
 import model.RoleProcessModel;
 
 public class ROLEPROCESS {
 
 	public	String[] model=new String[3];
+	public RoleProcessModel modeldoldur (HttpServletRequest s)
+	{
+		RoleProcessModel us =new RoleProcessModel();
+		us.setProcessId(Integer.parseInt(s.getParameter(us.GetProcessId)!=null?s.getParameter(us.GetProcessId):"0"));
+		us.setRoleId(Integer.parseInt(s.getParameter(us.GetRoleId)!=null?s.getParameter(us.GetRoleId):"0"));
+		us.setRoleProcessId(Integer.parseInt(s.getParameter(us.GetRoleProcessId)!=null?s.getParameter(us.GetRoleProcessId):"0"));
+		return us;
+	}
 	private void model_doldur(RoleProcessModel m){
 
 		model[0]=String.valueOf(m.getRoleProcessId());
@@ -47,7 +58,7 @@ public class ROLEPROCESS {
 		return roleProcessArray;
 		}
 	public int Create(RoleProcessModel model_) throws ClassNotFoundException, SQLException {
-		int a;
+		int a; 	model_doldur(model_);
 		a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 		return a;
 	}

@@ -4,8 +4,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import DBContext.CRUD;
 import model.RoleControllerModel;
+import model.RoleModel;
 
 public class ROLECONTROLLER {
 
@@ -18,6 +21,16 @@ public class ROLECONTROLLER {
 		
 		
 	}
+	public RoleControllerModel modeldoldur (HttpServletRequest s)
+	{
+		RoleControllerModel us =new RoleControllerModel();
+		us.setControlerId(Integer.parseInt(s.getParameter(us.GetControllerId)!=null?s.getParameter(us.GetControllerId):"0"));
+		us.setRoleControllerId(Integer.parseInt(s.getParameter(us.GetRoleControllerId)!=null?s.getParameter(us.GetRoleControllerId):"0"));
+		us.setRoleId(Integer.parseInt(s.getParameter(us.GetRoleId)!=null?s.getParameter(us.GetRoleId):"0"));
+		
+		return us;
+	}
+	
 	RoleControllerModel control=new RoleControllerModel();
 	CRUD cr=new CRUD();
 
@@ -50,7 +63,7 @@ public class ROLECONTROLLER {
 		return controlArray;
 		}
 	public int Create(RoleControllerModel model_) throws ClassNotFoundException, SQLException {
-		int a;
+		int a;	model_doldur(model_);
 		a=cr.Create(model_.ModelArrayString() ,model, model_.GetModelName);  
 		return a;
 	}
