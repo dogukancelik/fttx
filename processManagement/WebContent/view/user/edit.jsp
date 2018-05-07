@@ -25,7 +25,7 @@ for(ModelUser st:user.getUserListId("userId", ID))
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-user-circle"></i> Users Edit</div>
-		<form action="#" method="post">
+		<form action="#" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -34,6 +34,7 @@ for(ModelUser st:user.getUserListId("userId", ID))
 				<tr>
 					<td><input type="text" name="username" value="<%=u.getUserName()%>" class="input1"/></td>
 				</tr>
+				<tr><td><div id="usernameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Password: </td>
@@ -41,6 +42,7 @@ for(ModelUser st:user.getUserListId("userId", ID))
 				<tr>
 					<td><input type="text" name="password" value="<%=u.getPassword() %>" class="input1"/></td>
 				</tr>
+				<tr><td><div id="passwordVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Status: </td>

@@ -7,7 +7,7 @@
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-user-circle"></i> Users Create</div>
-		<form action="#" method="post">
+		<form action="#" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -16,6 +16,7 @@
 				<tr>
 					<td><input type="text" name="username" class="input1"/></td>
 				</tr>
+				<tr><td><div id="usernameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Password: </td>
@@ -23,6 +24,7 @@
 				<tr>
 					<td><input type="text" name="password" class="input1"/></td>
 				</tr>
+				<tr><td><div id="passwordVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Status: </td>

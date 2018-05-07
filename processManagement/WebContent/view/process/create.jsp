@@ -7,7 +7,7 @@
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-tasks"></i> Process Create</div>
-		<form action="#" method="post">
+		<form action="#" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -16,13 +16,15 @@
 				<tr>
 					<td><input type="text" name="processName" class="input1"/></td>
 				</tr>
+				<tr><td><div id="processNameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Process Description: </td>
 				</tr>
 				<tr>
 					<td><input type="text" name="description" class="input1"/></td>
-				</tr>			
+				</tr>
+				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>				
 				
 				<tr height="75"> 
 					<td colspan="2">

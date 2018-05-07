@@ -10,6 +10,7 @@
 	<%// @page import=""%>
 	<div class="contentItem">
 		<div class="head"><i class="fa fa-user-circle"></i> My Account</div>
+		<form action="test" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px;">
 			<tbody>
 				<tr>
@@ -21,8 +22,8 @@
 					<td><input type="text" name="surname" class="input1"/></td>
 				</tr>
 				<tr>
-					<td width="50%"><div id="valName" class="validator"></div></td>
-					<td><div id="valSurname" class="validator"></div></td>
+					<td width="50%"><div id="nameVal" class="validator"></div></td>
+					<td><div id="surnameVal" class="validator"></div></td>
 				</tr>
 				
 				<tr>
@@ -32,7 +33,7 @@
 					<td colspan="2"><input type="text" name="mail" class="input1"/></td>
 				</tr>
 				<tr>
-					<td colspan="2"><div id="valMail" class="validator"></div></td>
+					<td colspan="2"><div id="mailVal" class="validator"></div></td>
 				</tr>
 				
 				<tr>
@@ -42,7 +43,7 @@
 					<td colspan="2"><input type="text" name="phone" class="input1"/></td>
 				</tr>
 				<tr>
-					<td colspan="2"><div id="valPhone" class="validator"></div></td>
+					<td colspan="2"><div id="phoneVal" class="validator"></div></td>
 				</tr>
 				
 				<tr>
@@ -52,7 +53,7 @@
 					<td colspan="2"><textarea name="address" class="input1"></textarea></td>
 				</tr>
 				<tr>
-					<td colspan="2"><div id="valAddress" class="validator"></div></td>
+					<td colspan="2"><div id="addressVal" class="validator"></div></td>
 				</tr>
 				
 				<tr>
@@ -67,6 +68,7 @@
 				</tr>
 			</tbody>
 		</table>
+		</form>
 	</div>
 	<%
 	}
