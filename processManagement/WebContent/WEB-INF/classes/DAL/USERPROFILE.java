@@ -37,7 +37,7 @@ private void model_doldur(UserProfileModel m){
 	model[5]=m.getPhone().toString();
 	model[6]=m.getAddress().toString();
 	
-}
+ }
 UserProfileModel profile=new UserProfileModel();
 CRUD cr=new CRUD();
 

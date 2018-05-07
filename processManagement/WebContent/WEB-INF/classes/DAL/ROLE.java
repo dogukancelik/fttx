@@ -20,7 +20,7 @@ public class ROLE {
 		us.setRoleId(Integer.parseInt(s.getParameter(us.GetRoleId)!=null?s.getParameter(us.GetRoleId):"0"));
 		us.setRoleName(s.getParameter(us.GetRoleName));
 		return us;
-	}
+	 }
 	private void model_doldur(RoleModel m){
 
 		model[0]=String.valueOf(m.getRoleId());

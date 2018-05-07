@@ -32,7 +32,7 @@ public class WORKDEFINITION {
 		return us;
 	}
 	
-	WorkDefinitionModel WorkDefinitionModel=new WorkDefinitionModel();
+	 WorkDefinitionModel WorkDefinitionModel=new WorkDefinitionModel();
 	CRUD cr=new CRUD();
 
 	@SuppressWarnings("static-access")

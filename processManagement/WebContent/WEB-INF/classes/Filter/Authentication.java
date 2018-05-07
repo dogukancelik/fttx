@@ -73,7 +73,7 @@ public class Authentication implements Filter {
 											{
 												((HttpServletResponse)response).sendRedirect("/processManagement/login");
 											}
-							 }
+							}
 								else
 									{ ((HttpServletResponse)response).sendRedirect("/processManagement/login"); }
 					}

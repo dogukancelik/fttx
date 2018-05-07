@@ -22,7 +22,7 @@ public class ROLECONTROLLER {
 		
 	}
 	public RoleControllerModel modeldoldur (HttpServletRequest s)
-	{
+	 {
 		RoleControllerModel us =new RoleControllerModel();
 		us.setControlerId(Integer.parseInt(s.getParameter(us.GetControllerId)!=null?s.getParameter(us.GetControllerId):"0"));
 		us.setRoleControllerId(Integer.parseInt(s.getParameter(us.GetRoleControllerId)!=null?s.getParameter(us.GetRoleControllerId):"0"));

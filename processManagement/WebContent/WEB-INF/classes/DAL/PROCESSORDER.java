@@ -21,7 +21,7 @@ public class PROCESSORDER {
 		model[0]=String.valueOf(m.getProcessOrder());
 		model[0]=String.valueOf(String.valueOf(m.getProcessCheck()));
 		}
-	public ProcessOrderModel modeldoldur (HttpServletRequest s)
+	 public ProcessOrderModel modeldoldur (HttpServletRequest s)
 	{
 		ProcessOrderModel us =new ProcessOrderModel();
 		us.setProcessCheck(Boolean.parseBoolean(s.getParameter(us.GetCheck)));

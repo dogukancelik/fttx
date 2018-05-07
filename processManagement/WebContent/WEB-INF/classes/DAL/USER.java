@@ -34,7 +34,7 @@ public ArrayList<ModelUser> getUserList() throws ClassNotFoundException, SQLExce
     Users.add(user);
 	}
 	 return Users;
-   }
+    }
 @SuppressWarnings("unchecked")
 public ArrayList<ModelUser> getUserListId(String WhereItem,String WhereValue,String kosul) throws ClassNotFoundException, SQLException {
     List<String[]> a= new ArrayList<String[]>();

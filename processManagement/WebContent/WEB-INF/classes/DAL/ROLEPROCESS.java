@@ -26,7 +26,7 @@ public class ROLEPROCESS {
 		model[0]=String.valueOf(m.getRoleProcessId());
 		model[1]=String.valueOf(m.getRoleId());
 		model[2]=String.valueOf(m.getProcessId());
-	}
+	 }
 	RoleProcessModel roleProcess=new RoleProcessModel();
 	CRUD cr=new CRUD();
 

@@ -21,7 +21,7 @@ public class PROCESS {
 		
 	}
 	public ProcessModel modeldoldur (HttpServletRequest s)
-	{
+	 {
 		ProcessModel us =new ProcessModel();
 		us.setProcessDescription(s.getParameter(us.GetProcessDescription));
 		us.setProcessId(Integer.parseInt(s.getParameter(us.GetProcessId)!=null ?s.getParameter(us.GetProcessId):"0"));

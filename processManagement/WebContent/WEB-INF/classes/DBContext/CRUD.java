@@ -27,7 +27,7 @@ public class CRUD   {
 				 str[i-1]=rs.getString(i);
 				 }
 				 sbn.add(str);
-				 }			}
+			  	 }			}
 					dbContext.ConnectionClose();
 					return sbn;
 	   }

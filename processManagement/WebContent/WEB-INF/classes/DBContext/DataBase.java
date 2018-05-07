@@ -38,7 +38,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		int a=0;
 		ModelUser us=new ModelUser();
 		
-		HttpSession aa= request.getSession();
+		 HttpSession aa= request.getSession();
 		
 		
 		try {

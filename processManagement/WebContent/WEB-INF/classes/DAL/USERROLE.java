@@ -33,7 +33,7 @@ public class USERROLE {
 		return us;
 	}
 	
-	UserRoleModel UserRoleModel=new UserRoleModel();
+	 UserRoleModel UserRoleModel=new UserRoleModel();
 	CRUD cr=new CRUD();
 
 	@SuppressWarnings("static-access")

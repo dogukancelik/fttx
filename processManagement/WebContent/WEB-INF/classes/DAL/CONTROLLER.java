@@ -22,7 +22,7 @@ public class CONTROLLER {
 		
 	}
 	public ControllerModel modeldoldur (HttpServletRequest s)
-	{
+	 {
 		ControllerModel us =new ControllerModel();
 		us.setActionName(s.getParameter(us.GetActionName));
 		us.setControllerId(Integer.parseInt(s.getParameter(us.GetControllerId)!=null ? s.getParameter(us.GetControllerId):"0"));
