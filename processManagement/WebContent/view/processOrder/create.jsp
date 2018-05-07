@@ -7,7 +7,7 @@
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-sort"></i> Process Order Create</div>
-		<form action="#" method="post">
+		<form action="#" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -16,6 +16,7 @@
 				<tr>
 					<td><select class="select1" name="processorder"><option>select</option></select></td>
 				</tr>
+				<tr><td><div id="processorderVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Process Order ID: </td>
@@ -23,6 +24,7 @@
 				<tr>
 					<td><select class="select1" name="processorderid"><option>select</option></select></td>
 				</tr>
+				<tr><td><div id="processorderidVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Work Definition: </td>
@@ -30,6 +32,7 @@
 				<tr>
 					<td><select class="select1" name="workdefinition"><option>select</option></select></td>
 				</tr>
+				<tr><td><div id="workdefinitionVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Process Check: </td>

@@ -7,7 +7,7 @@
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-cubes"></i> Role Process Edit</div>
-		<form action="#" method="post">
+		<form action="#" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -16,13 +16,15 @@
 				<tr>
 					<td><select name="processid" class="select1"><option>select</option></select></td>
 				</tr>
+				<tr><td><div id="processidVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Role ID: </td>
 				</tr>
 				<tr>
 					<td><select name="roleid" class="select1"><option>select</option></select></td>
-				</tr>			
+				</tr>		
+				<tr><td><div id="roleidVal" class="validator"></div></td></tr>		
 				
 				<tr height="75"> 
 					<td colspan="2">

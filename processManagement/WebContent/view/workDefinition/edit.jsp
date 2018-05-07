@@ -14,16 +14,17 @@ WorkDefinitionModel wdm = new WorkDefinitionModel();
 
 <div class="content">
 	<div class="contentItem" style="width:450px">
-		<div class="head"><i class="fa fa-th"></i> Work Definiton Edit</div>
-		<form action="#" method="post">
+		<div class="head"><i class="fa fa-th"></i> Work Definition Edit</div>
+		<form action="#" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
-					<td class="label1">Definiton Name: </td>
+					<td class="label1">Definition Name: </td>
 				</tr>
 				<tr>
 					<td><input type="text" name="definitonname" class="input1" value="<%=wdm.getWorkDefinitionName()%>"/></td>
 				</tr>
+				<tr><td><div id="definitonnameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Description: </td>
@@ -31,6 +32,7 @@ WorkDefinitionModel wdm = new WorkDefinitionModel();
 				<tr>
 					<td><input type="text" name="description" class="input1" value="<%=wdm.getWorkDefinitionDesciription()%>"/></td>
 				</tr>
+				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>
 							
 				
 				<tr height="75"> 

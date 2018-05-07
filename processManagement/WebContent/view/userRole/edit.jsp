@@ -18,7 +18,7 @@ UserRoleModel urm = new UserRoleModel();
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-users"></i> User Role Edit</div>
-		<form action="#" method="post">
+		<form action="#" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -27,6 +27,7 @@ UserRoleModel urm = new UserRoleModel();
 				<tr>
 					<td><select name="roleid" class="select1"><option>select</option></select></td>
 				</tr>
+				<tr><td><div id="roleidVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">User ID: </td>
@@ -34,13 +35,15 @@ UserRoleModel urm = new UserRoleModel();
 				<tr>
 					<td><select name="userid" class="select1"><option>select</option></select></td>
 				</tr>
+				<tr><td><div id="useridVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Description: </td>
 				</tr>
 				<tr>
 					<td><input type="text" name="description" class="input1" value="<%=urm.getUserRoleDescription()%>"/></td>
-				</tr>			
+				</tr>		
+				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>		
 				
 				<tr height="75"> 
 					<td colspan="2">

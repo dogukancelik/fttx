@@ -46,7 +46,7 @@ function validate(elm){
 	var x=0;
 	for(var i=0;i<elm.length-1;i++){
 		if(elm[i].value==""){
-			$("#"+elm[i].name+"Val").html(elm[i].name+" Connot Be Empty !");
+			$("#"+elm[i].name+"Val").html(elm[i].name+" Cannot Be Empty !");
 			x++;
 		}
 		else{

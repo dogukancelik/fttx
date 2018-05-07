@@ -6,16 +6,19 @@
 
 <div class="content">
 	<div class="contentItem" style="width:450px">
+
 		<div class="head"><i class="fa fa-th"></i> Work Definiton Create</div>
 		<form action="/processManagement/t" method="post">
-		<table style="margin:15px; width:400px;">
+
+			<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
-					<td class="label1">Definiton Name: </td>
+					<td class="label1">Definition Name: </td>
 				</tr>
 				<tr>
 					<td><input type="text" name="WorkDefinitionName" class="input1"/></td>
 				</tr>
+				<tr><td><div id="definitonnameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Description: </td>
@@ -23,6 +26,7 @@
 				<tr>
 					<td><input type="text" name="WorkDefinitionDescription" class="input1"/></td>
 				</tr>
+				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>
 							
 				
 				<tr height="75"> 
