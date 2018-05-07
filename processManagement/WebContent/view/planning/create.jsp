@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/calendar.css">
 <div class="content">
 	<div class="contentItem" style="width:1015px">
-		<div class="head"><i class="fa fa-calendar"></i> Planning</div>
+		<div class="head"><i class="fa fa-calendar"></i> Planning Create</div>
 		<div>
 			<div id="draggableEvents" style="margin:15px; width:250px; float:left"></div>
 			<div id="calendar" style="margin:15px; float:right"></div>
