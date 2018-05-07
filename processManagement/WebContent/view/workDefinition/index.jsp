@@ -12,7 +12,13 @@
 	<div class="contentItem" style="width:800px">
 		<div class="head"><i class="fa fa-th"></i> Work Definiton List</div>
 		<div style="height:30px; line-height:30px">&nbsp<a class="a1" href="workDefinition/create">Create New Work Definiton</a></div>
-		<table id="table_id" class="display">
+		<div class="loading">
+    		<i class="fa fa-refresh fa-spin"></i>
+    			Data Loading...
+    			
+		</div>
+		<br>
+		<table id="table_id" style="display:none" class="display">
 		    <thead>
 		        <tr>
 		            <th>ID</th>
@@ -51,7 +57,12 @@
 <script type="text/javascript" src="js/jquery-uiDataTable.js"></script>
 <script>
 $(document).ready( function () {
-    $('#table_id').DataTable();
+	setTimeout(function(){ 
+		$("#table_id").show();
+	    $(".loading").hide();
+	    $('#table_id').DataTable();
+	}, 1000);
+	
 } );
 </script>
 
