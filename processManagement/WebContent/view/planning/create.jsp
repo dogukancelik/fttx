@@ -14,6 +14,7 @@
 		</div>
 		
 		<div style="height:50px; line-height:50px; float:left; width:1000px;">
+			<input type="hidden" name="actions" value="planning,create">
 			<a href="planning/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
 			<input type="submit" value="Create" class="button1">
 		</div>

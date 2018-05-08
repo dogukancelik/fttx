@@ -24,7 +24,7 @@ ProcessStepModel pm = new ProcessStepModel();
 		<form action="#" method="post">
 		<div style="height:75px; line-height:75px">
 			<a href="processStep/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
-			<input type="hidden" name="actions" value="PROCESSSTEP,delete">
+			<input type="hidden" name="actions" value="processStep,delete">
 			<input type="submit" value="Delete" class="button1">
 		</div>
 		</form>

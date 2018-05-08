@@ -23,7 +23,7 @@ RoleProcessModel rpm = new RoleProcessModel();
 		<form action="#" method="post">
 		<div style="height:75px; line-height:75px">
 			<a href="roleProcess/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
-			<input type="hidden" name="actions" value="ROLEPROCESS,delete">
+			<input type="hidden" name="actions" value="roleProcess,delete">
 			<input type="submit" value="Delete" class="button1">
 		</div>
 		</form>

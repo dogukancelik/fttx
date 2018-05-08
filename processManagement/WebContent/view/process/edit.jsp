@@ -33,7 +33,7 @@
 				<tr height="75"> 
 					<td colspan="2">
 						<a href="process/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
-						<input type="hidden"name="actions" value="PROCESS,edit">
+						<input type="hidden"name="actions" value="process,edit">
 						<input type="submit" value="Edit" class="button1">
 					</td>
 				</tr>

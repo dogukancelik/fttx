@@ -32,7 +32,7 @@ for(ModelUser st:user.getUserListId("userId", ID))
 		<form action="#" method="post">
 		<div style="height:75px; line-height:75px">
 			<a href="user/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
-			<input type="hidden" name="actions" value="USER,delete">
+			<input type="hidden" name="actions" value="user,delete">
 			<input type="submit" value="Delete" class="button1">
 		</div>
 		</form>

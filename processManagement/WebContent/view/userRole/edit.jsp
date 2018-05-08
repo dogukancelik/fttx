@@ -48,7 +48,7 @@ UserRoleModel urm = new UserRoleModel();
 				<tr height="75"> 
 					<td colspan="2">
 						<a href="userRole/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
-						<input type="hidden" name="actions" value="USERROLE,edit">
+						<input type="hidden" name="actions" value="userRole,edit">
 						<input type="submit" value="Edit" class="button1">
 					</td>
 				</tr>

@@ -27,7 +27,7 @@ UserRoleModel urm = new UserRoleModel();
 		<form action="#" method="post">
 		<div style="height:75px; line-height:75px">
 			<a href="userRole/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
-			<input type="hidden" name="actions" value="USERROLE,delete">
+			<input type="hidden" name="actions" value="userRole,delete">
 			<input type="submit" value="Delete" class="button1">
 		</div>
 		</form>
