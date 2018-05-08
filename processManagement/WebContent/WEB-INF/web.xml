@@ -111,6 +111,26 @@
   
   
   <!-- 
+  ############# DATABASE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>DataBase</servlet-name>
+    <servlet-class>DBContext.DataBase</servlet-class>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>DataBase</servlet-name>
+    <url-pattern>/dataBase</url-pattern>
+  </servlet-mapping>
+  
+ <!-- 
+  ############# DATABASE ############### 
+  -->
+  
+  
+  
+  <!-- 
   ############# USER INDEX ############### 
   -->
   

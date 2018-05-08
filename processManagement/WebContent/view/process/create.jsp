@@ -7,7 +7,7 @@
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-tasks"></i> Process Create</div>
-		<form action="#" method="post" onsubmit="return validate(this)">
+		<form action="/dataBase" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>

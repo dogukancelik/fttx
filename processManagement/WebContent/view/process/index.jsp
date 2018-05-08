@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.ProcessModel"  %>
+<%@ page import="model.ProcessModel, DAL.PROCESS"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -37,7 +37,8 @@
 		    </tfoot>
 		    <tbody>
 		    <% 
-				ProcessModel st = new ProcessModel();
+		    	PROCESS p = new PROCESS();
+		    	for(ProcessModel st:p.GetProcessList()){
 		    %>
 		        <tr align="center">
 		            <td><%=st.getProcessId() %></td>
@@ -48,7 +49,7 @@
 		            	<a class="a1" href="process/delete/<%=st.getProcessId() %>">Delete</a>
 		            </td>
 		        </tr>
-		    <% %>
+		    <% }%>
 		    </tbody>
 		</table>
 	</div>

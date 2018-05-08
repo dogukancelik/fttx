@@ -38,6 +38,7 @@ public class PROCESS {
 	    ArrayList<ProcessModel> processArray =new ArrayList<ProcessModel>();
 	    a=cr.GetList(process.ModelArrayString(),process.GetModelName);
 		for(String []  lst : a) {
+		ProcessModel process = new ProcessModel();	
 	    process.setProcessId(Integer.parseInt(lst[0].toString()));
 		process.setProcessName(lst[1].toString());
 		process.setProcessDescription(lst[2].toString());
