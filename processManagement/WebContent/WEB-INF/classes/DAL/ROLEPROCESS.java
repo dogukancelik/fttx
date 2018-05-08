@@ -37,10 +37,11 @@ public class ROLEPROCESS {
 	    ArrayList<RoleProcessModel> roleProcessArray =new ArrayList<RoleProcessModel>();
 	    a=cr.GetList(roleProcess.ModelArrayString(),roleProcess.GetModelName);
 		for(String []  lst : a) {
-	    roleProcess.setRoleProcessId(Integer.parseInt(lst[0].toString()));
-		roleProcess.setRoleId(Integer.parseInt(lst[1].toString()));
-		roleProcess.setProcessId(Integer.parseInt(lst[2].toString()));
-   roleProcessArray.add(roleProcess);
+			RoleProcessModel rolProcess=new RoleProcessModel();
+			rolProcess.setRoleProcessId(Integer.parseInt(lst[0].toString()));
+		rolProcess.setRoleId(Integer.parseInt(lst[1].toString()));
+		rolProcess.setProcessId(Integer.parseInt(lst[2].toString()));
+   roleProcessArray.add(rolProcess);
 	}
 		return roleProcessArray;
 		}
@@ -50,10 +51,11 @@ public class ROLEPROCESS {
 	    ArrayList<RoleProcessModel> roleProcessArray =new ArrayList<RoleProcessModel>();
 	    a=cr.GetListId(roleProcess.ModelArrayString(),roleProcess.GetModelName,WhereItem,WhereValue,null);
 		for(String []  lst : a) {
-			 roleProcess.setRoleProcessId(Integer.parseInt(lst[0].toString()));
-				roleProcess.setRoleId(Integer.parseInt(lst[1].toString()));
-				roleProcess.setProcessId(Integer.parseInt(lst[2].toString()));
-		roleProcessArray.add(roleProcess);
+			RoleProcessModel rolesProcess=new RoleProcessModel();
+			 rolesProcess.setRoleProcessId(Integer.parseInt(lst[0].toString()));
+				rolesProcess.setRoleId(Integer.parseInt(lst[1].toString()));
+				rolesProcess.setProcessId(Integer.parseInt(lst[2].toString()));
+		roleProcessArray.add(rolesProcess);
 	}
 		return roleProcessArray;
 		}

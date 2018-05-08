@@ -26,10 +26,10 @@ import javax.servlet.http.HttpSession;
 		DispatcherType.REQUEST,
 		DispatcherType.FORWARD,
 		DispatcherType.INCLUDE}
-,urlPatterns= {"/s","/index","/planing/index","/process/index","/processOrder/index","/processStep/index","/role/index","/roleProcess/index","/shared/layout_footer","/user/index","/userRole/index","/workDefinition/index",
-		"/planing/create","/process/create","/processOrder/create","/processStep/create","/role/create","/roleProcess/create","/shared/layout_header","/user/create","/userRole/create","/workDefinition/create",
-		"/planing/edit","/process/edit","/processOrder/edit","/processStep/edit","/role/edit","/roleProcess/edit","/shared/secure","/user/edit","/userRole/edit","/workDefinition/edit",
-		"/planing/delete","/process/delete","/processOrder/delete","/processStep/delete","/role/delete","/roleProcess/delete","/shared/","/user/delete","/userRole/delete","/workDefinition/delete"
+,urlPatterns= {"/s","/index","/planning/index","/process/index","/processOrder/index","/processStep/index","/role/index","/roleProcess/index","/shared/layout_footer","/user/index","/userRole/index","/workDefinition/index",
+		"/planning/create","/process/create","/processOrder/create","/processStep/create","/role/create","/roleProcess/create","/shared/layout_header","/user/create","/userRole/create","/workDefinition/create",
+		"/planning/edit","/process/edit","/processOrder/edit","/processStep/edit","/role/edit","/roleProcess/edit","/shared/secure","/user/edit","/userRole/edit","/workDefinition/edit",
+		"/planning/delete","/process/delete","/processOrder/delete","/processStep/delete","/role/delete","/roleProcess/delete","/shared/","/user/delete","/userRole/delete","/workDefinition/delete"
 
 })
 public class Authentication implements Filter {
@@ -65,8 +65,8 @@ public class Authentication implements Filter {
 							{
 									if(us.getUserListId("username",kullaniciAdi.toString()," and password='"+password.toString()+"'").size()>0) 
 									{ 
-										session.setAttribute("UserId", mus.getUserId());
-										session.setMaxInactiveInterval(60*2);
+										session.setAttribute("UserId",(us.getUserListId("username",kullaniciAdi.toString()," and password='"+password.toString()+"'").get(0).getUserId()) );
+										session.setMaxInactiveInterval(60*60);
 										((HttpServletResponse)response).sendRedirect("/processManagement/index");
 									}	 
 										else

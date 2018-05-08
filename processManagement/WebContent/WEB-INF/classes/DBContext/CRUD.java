@@ -110,5 +110,22 @@ public int Delete(String model,String valuesPrm,String value) throws SQLExceptio
 	return rs;
 	}
 	
+public List Query(String query) throws ClassNotFoundException, SQLException {
+	       PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(query.toString());
+	      	 ResultSet rs = psmt.executeQuery();
+			List sbn=new ArrayList<String>();
+				while(rs.next())
+			 {
+			 String [] str=new String[rs.getMetaData().getColumnCount()];
+			 for (int i = 1; i < rs.getMetaData().getColumnCount()+1 ; i++) {
+			 str[i-1]=rs.getString(i);
+			 }
+			 sbn.add(str);
+			 }			
+				dbContext.ConnectionClose();
+				return sbn;
+   }
+
+
 
 }

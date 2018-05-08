@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import Account.Account;
 import model.ModelUser;
 import model.UserProfileModel;
 import model.WorkDefinitionModel;
@@ -30,6 +31,8 @@ public class DataBase extends HttpServlet {
 @SuppressWarnings("unchecked")
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		Account ac=new Account();
 		USER user=new USER();
 		USERPROFILE  prf=new USERPROFILE();
 		UserProfileModel  prf1=new UserProfileModel();
@@ -40,8 +43,17 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		
 		 HttpSession aa= request.getSession();
 		
+		 try {
+			boolean as=ac.IsAuthority("process", "index","1");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		try {
+		 /*	try {
 		
 			
 			wrk=wr.modeldoldur(request);
@@ -54,7 +66,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 	/*	try {

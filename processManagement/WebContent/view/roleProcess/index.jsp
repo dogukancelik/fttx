@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.RoleProcessModel"  %>
+<%@ page import="model.RoleProcessModel,DAL.ROLEPROCESS"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -37,7 +37,10 @@
 		    </tfoot>
 		    <tbody>
 		    <% 
-		    	RoleProcessModel rpm = new RoleProcessModel();
+		    ROLEPROCESS rlp =new ROLEPROCESS();	
+		    
+		    for(RoleProcessModel rpm:rlp.GetroleProcessList()){
+		  
 		    %>
 		        <tr align="center">
 		            <td><%=rpm.getRoleProcessId() %></td>
@@ -48,7 +51,7 @@
 		            	<a class="a1" href="roleProcess/delete/<%=rpm.getRoleProcessId() %>">Delete</a>
 		            </td>
 		        </tr>
-		    <%%>
+		    <%}%>
 		    </tbody>
 		</table>
 	</div>
