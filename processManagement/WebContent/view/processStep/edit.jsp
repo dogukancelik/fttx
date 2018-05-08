@@ -13,12 +13,14 @@
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
-					<td class="label1">Date: </td>
+					<td class="label1">Process : </td>
 				</tr>
 				<tr>
-					<td><input type="date" name="ProcessDate" class="input1" value="<%=pm.getProcessDate()%>"/></td>
+					<td>
+						<select class="select1" name="ProcessId"><option>select</option></select>
+					</td>
 				</tr>
-				<tr><td><div id="ProcessDateVal" class="validator"></div></td></tr>
+				<tr><td><div id="ProcessIdVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">User : </td>
@@ -27,8 +29,17 @@
 					<td>
 						<select class="select1" name="UserId"><option>select</option></select>
 					</td>
-				</tr>			
-				<tr><td><div id="UserIdVal" class="validator"></div></td></tr>	
+				</tr>
+				<tr><td><div id="UserIdVal" class="validator"></div></td></tr>
+				
+				<tr>
+					<td class="label1">Date: </td>
+				</tr>
+				<tr>
+					<td><input type="date" name="ProcessDate" class="input1" value="<%=pm.getProcessDate()%>"/></td>
+				</tr>
+				<tr><td><div id="ProcessDateVal" class="validator"></div></td></tr>
+					
 				
 				<tr height="75"> 
 					<td colspan="2">

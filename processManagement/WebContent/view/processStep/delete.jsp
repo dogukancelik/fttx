@@ -18,8 +18,9 @@ ProcessStepModel pm = new ProcessStepModel();
 		<div class="head"><i class="fa fa-step-forward"></i> Process Step Delete</div>
 		<h2>Do you want to delete this Process Step ?</h2>
 		<div>Process Step ID: <b><%=pm.getProcessStepId() %></b></div>
-		<div>Process Step Date: <b><%=pm.getProcessDate()%></b></div>
+		<div>Process ID: <b><%=pm.getProcessId() %></b></div>
 		<div>User ID: <b><%=pm.getUserId() %></b></div>
+		<div>Process Step Date: <b><%=pm.getProcessDate()%></b></div>
 		
 		<form action="#" method="post">
 		<div style="height:75px; line-height:75px">

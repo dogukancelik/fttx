@@ -21,16 +21,18 @@
 		    <thead>
 		        <tr>
 		            <th>ID</th>
-		            <th>Process Date</th>
+		            <th>Process ID</th>
 		            <th>User ID</th>
+		            <th>Process Date</th>
 		            <th></th>
 		        </tr>
 		    </thead>
 		    <tfoot>
 		        <tr>
 		            <th>ID</th>
-		            <th>Process Date</th>
+		            <th>Process ID</th>
 		            <th>User ID</th>
+		            <th>Process Date</th>
 		            <th></th>
 		        </tr>
 		    </tfoot>
@@ -40,8 +42,9 @@
 		    %>
 		        <tr align="center">
 		            <td><%=st.getProcessStepId() %></td>
-		            <td><%=st.getProcessDate()%></td>
+		            <td><%=st.getProcessId() %></td>
 		            <td><%=st.getUserId()%> </td>
+		            <td><%=st.getProcessDate()%></td>
 		            <td>
 		            	<a class="a1" href="processStep/edit/<%=st.getProcessStepId() %>">Edit</a> |
 		            	<a class="a1" href="processStep/delete/<%=st.getProcessStepId() %>">Delete</a>
