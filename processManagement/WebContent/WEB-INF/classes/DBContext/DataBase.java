@@ -20,7 +20,15 @@ import model.ModelUser;
 import model.UserProfileModel;
 import model.WorkDefinitionModel;
 import DAL.USERPROFILE;
+import DAL.USERROLE;
 import DAL.WORKDEFINITION;
+import DAL.CONTROLLER;
+import DAL.PROCESS;
+import DAL.PROCESSORDER;
+import DAL.PROCESSSTEP;
+import DAL.ROLE;
+import DAL.ROLECONTROLLER;
+import DAL.ROLEPROCESS;
 import DAL.USER;
 @WebServlet("/DataBase")
 public class DataBase extends HttpServlet {
@@ -31,28 +39,114 @@ public class DataBase extends HttpServlet {
 @SuppressWarnings("unchecked")
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	//response.getWriter().append("Served at: ").append(request.getContextPath());
+	USER user=new USER();
+	CONTROLLER con=new CONTROLLER();
+	PROCESS prcess=new PROCESS();
+	PROCESSORDER usroleorder=new PROCESSORDER();
+	PROCESSSTEP prstp =new PROCESSSTEP();
+	ROLE rl=new ROLE();
+	ROLECONTROLLER rlcon=new ROLECONTROLLER();
+	ROLEPROCESS rlprocess=new ROLEPROCESS();
+	USERPROFILE usrprf=new USERPROFILE();
+	USERROLE usrole=new USERROLE();
+	WORKDEFINITION wrk=new WORKDEFINITION();
+	
+ String [] prm=request.getParameter("actions").split(",");
+ String controller=prm[0];
+ String action=prm[1];
+	try {	
+	switch (controller.toLowerCase()) { 
+     case "user": if(action.equals("create")) {  user.Create(user.modeldoldur(request));
+     													}else {  if(action.equals("edit")) {user.Edit(user.modeldoldur(request)); 
+     													  } else { if(action.equals("delete")) { user.Delete(user.modeldoldur(request));
+     																																	}
+     																									}
+     														  }   
+              break;
+     case "controller": if(action.equals("create")) {  con.Create(con.modeldoldur(request));
+		}else {  if(action.equals("edit")) {con.Edit(con.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { con.Delete(con.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "process":  if(action.equals("create")) {  prcess.Create(prcess.modeldoldur(request));
+		}else {  if(action.equals("edit")) {prcess.Edit(prcess.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { prcess.Delete(prcess.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "processorder":   if(action.equals("create")) {  usroleorder.Create(usroleorder.modeldoldur(request));
+		}else {  if(action.equals("edit")) {usroleorder.Edit(usroleorder.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { usroleorder.Delete(usroleorder.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "processstep":  if(action.equals("create")) {  prstp.Create(prstp.modeldoldur(request));
+		}else {  if(action.equals("edit")) {prstp.Edit(prstp.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { prstp.Delete(prstp.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "role":  if(action.equals("create")) {  rl.Create(rl.modeldoldur(request));
+		}else {  if(action.equals("edit")) {rl.Edit(rl.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { rl.Delete(rl.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "rolecontroller":   if(action.equals("create")) {  rlcon.Create(rlcon.modeldoldur(request));
+		}else {  if(action.equals("edit")) {rlcon.Edit(rlcon.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { rlcon.Delete(rlcon.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "roleprocess":   if(action.equals("create")) {  rlprocess.Create(rlprocess.modeldoldur(request));
+		}else {  if(action.equals("edit")) {rlprocess.Edit(rlprocess.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { rlprocess.Delete(rlprocess.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "userprofile":   if(action.equals("create")) {  usrprf.Create(usrprf.modeldoldur(request));
+		}else {  if(action.equals("edit")) {usrprf.Edit(usrprf.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { usrprf.Delete(usrprf.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "userrole":  if(action.equals("create")) {  usrole.Create(usrole.modeldoldur(request));
+		}else {  if(action.equals("edit")) {usrole.Edit(usrole.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { usrole.Delete(usrole.modeldoldur(request));
+																						}
+														}
+			  }   ;
+              break;
+     case "workdefinition":  if(action.equals("create")) {  wrk.Create(wrk.modeldoldur(request));
+		}else {  if(action.equals("edit")) {wrk.Edit(wrk.modeldoldur(request)); 
+		  } else { if(action.equals("delete")) { wrk.Delete(wrk.modeldoldur(request));
+																						}
+														}
+			  }   ;
+                          break;
+     }
+	
+   response.sendRedirect("/processManagement/"+controller+"/");
 		
-		Account ac=new Account();
-		USER user=new USER();
-		USERPROFILE  prf=new USERPROFILE();
-		UserProfileModel  prf1=new UserProfileModel();
-		WORKDEFINITION  wr=new WORKDEFINITION();
-		WorkDefinitionModel wrk=new WorkDefinitionModel();
-		int a=0;
-		ModelUser us=new ModelUser();
 		
-		 HttpSession aa= request.getSession();
-		
-		 try {
-			boolean as=ac.IsAuthority("process", "index","1");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
 		 /*	try {
 		
 			

@@ -25,7 +25,7 @@ for(ModelUser st:user.getUserListId("userId", ID,""))
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-user-circle"></i> Users Edit</div>
-		<form action="#" method="post" onsubmit="return validate(this)">
+		<form action="/DataBase" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -55,6 +55,7 @@ for(ModelUser st:user.getUserListId("userId", ID,""))
 					<td colspan="2">
 						<a href="user/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
 						<input type="hidden" name="actions" value="user,edit">
+						<input type="hidden" name="UserId" value="<%=ID%>">
 						<input type="submit" value="Edit" class="button1">
 					</td>
 				</tr>
