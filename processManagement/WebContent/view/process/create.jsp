@@ -14,17 +14,17 @@
 					<td class="label1">Process Name: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="processName" class="input1"/></td>
+					<td><input type="text" name="ProcessName" class="input1"/></td>
 				</tr>
-				<tr><td><div id="processNameVal" class="validator"></div></td></tr>
+				<tr><td><div id="ProcessNameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Process Description: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="description" class="input1"/></td>
+					<td><input type="text" name="ProcessDescription" class="input1"/></td>
 				</tr>
-				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>				
+				<tr><td><div id="ProcessDescriptionVal" class="validator"></div></td></tr>				
 				
 				<tr height="75"> 
 					<td colspan="2">

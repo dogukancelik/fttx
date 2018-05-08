@@ -22,17 +22,17 @@ WorkDefinitionModel wdm = new WorkDefinitionModel();
 					<td class="label1">Definition Name: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="definitonname" class="input1" value="<%=wdm.getWorkDefinitionName()%>"/></td>
+					<td><input type="text" name="WorkDefinitionName" class="input1" value="<%=wdm.getWorkDefinitionName()%>"/></td>
 				</tr>
-				<tr><td><div id="definitonnameVal" class="validator"></div></td></tr>
+				<tr><td><div id="WorkDefinitionNameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Description: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="description" class="input1" value="<%=wdm.getWorkDefinitionDesciription()%>"/></td>
+					<td><input type="text" name="WorkDescription" class="input1" value="<%=wdm.getWorkDefinitionDesciription()%>"/></td>
 				</tr>
-				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>
+				<tr><td><div id="WorkDescriptionVal" class="validator"></div></td></tr>
 							
 				
 				<tr height="75"> 

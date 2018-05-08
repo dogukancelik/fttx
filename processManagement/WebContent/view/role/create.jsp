@@ -18,17 +18,17 @@
 					<td class="label1">Role Name: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="rolename" class="input1"/></td>
+					<td><input type="text" name="RoleName" class="input1"/></td>
 				</tr>
-				<tr><td><div id="rolenameVal" class="validator"></div></td></tr>
+				<tr><td><div id="RoleNameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Description: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="description" class="input1"/></td>
+					<td><input type="text" name="RoleDescription" class="input1"/></td>
 				</tr>	
-				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>		
+				<tr><td><div id="RoleDescriptionVal" class="validator"></div></td></tr>		
 				
 				<tr height="75"> 
 					<td colspan="2">

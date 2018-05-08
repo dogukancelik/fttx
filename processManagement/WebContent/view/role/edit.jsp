@@ -24,17 +24,17 @@ RoleModel rm = new RoleModel();
 					<td class="label1">Role Name: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="rolename" value="<%=rm.getRoleName()%>" class="input1"/></td>
+					<td><input type="text" name="RoleName" value="<%=rm.getRoleName()%>" class="input1"/></td>
 				</tr>
-				<tr><td><div id="rolenameVal" class="validator"></div></td></tr>
+				<tr><td><div id="RoleNameVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Description: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="description" value="<%=rm.getRoleDescription() %>" class="input1"/></td>
+					<td><input type="text" name="RoleDescription" value="<%=rm.getRoleDescription() %>" class="input1"/></td>
 				</tr>	
-				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>			
+				<tr><td><div id="RoleDescriptionVal" class="validator"></div></td></tr>			
 				
 				<tr height="75"> 
 					<td colspan="2">

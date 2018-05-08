@@ -14,25 +14,25 @@
 					<td class="label1">Role ID: </td>
 				</tr>
 				<tr>
-					<td><select name="roleid" class="select1"><option>select</option></select></td>
+					<td><select name="RoleId" class="select1"><option>select</option></select></td>
 				</tr>
-				<tr><td><div id="roleidVal" class="validator"></div></td></tr>
+				<tr><td><div id="RoleIdVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">User ID: </td>
 				</tr>
 				<tr>
-					<td><select name="userid" class="select1"><option>select</option></select></td>
+					<td><select name="UserId" class="select1"><option>select</option></select></td>
 				</tr>
-				<tr><td><div id="useridVal" class="validator"></div></td></tr>
+				<tr><td><div id="UserIdVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Description: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="description" class="input1"/></td>
+					<td><input type="text" name="UserRoleDescription" class="input1"/></td>
 				</tr>		
-				<tr><td><div id="descriptionVal" class="validator"></div></td></tr>	
+				<tr><td><div id="UserRoleDescriptionVal" class="validator"></div></td></tr>	
 				
 				<tr height="75"> 
 					<td colspan="2">

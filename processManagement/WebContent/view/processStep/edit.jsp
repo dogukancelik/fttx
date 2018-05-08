@@ -16,19 +16,19 @@
 					<td class="label1">Date: </td>
 				</tr>
 				<tr>
-					<td><input type="date" name="date" class="input1" value="<%=pm.getProcessDate()%>"/></td>
+					<td><input type="date" name="ProcessDate" class="input1" value="<%=pm.getProcessDate()%>"/></td>
 				</tr>
-				<tr><td><div id="dateVal" class="validator"></div></td></tr>
+				<tr><td><div id="ProcessDateVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">User : </td>
 				</tr>
 				<tr>
 					<td>
-						<select class="select1" name="userid"><option>select</option></select>
+						<select class="select1" name="UserId"><option>select</option></select>
 					</td>
 				</tr>			
-				<tr><td><div id="useridVal" class="validator"></div></td></tr>	
+				<tr><td><div id="UserIdVal" class="validator"></div></td></tr>	
 				
 				<tr height="75"> 
 					<td colspan="2">

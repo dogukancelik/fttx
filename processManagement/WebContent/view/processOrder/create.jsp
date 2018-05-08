@@ -14,31 +14,31 @@
 					<td class="label1">Process Order: </td>
 				</tr>
 				<tr>
-					<td><select class="select1" name="processorder"><option>select</option></select></td>
+					<td><select class="select1" name="ProcessOrder"><option>select</option></select></td>
 				</tr>
-				<tr><td><div id="processorderVal" class="validator"></div></td></tr>
+				<tr><td><div id="ProcessOrderVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Process Order ID: </td>
 				</tr>
 				<tr>
-					<td><select class="select1" name="processorderid"><option>select</option></select></td>
+					<td><select class="select1" name="ProcessOrderId"><option>select</option></select></td>
 				</tr>
-				<tr><td><div id="processorderidVal" class="validator"></div></td></tr>
+				<tr><td><div id="ProcessOrderIdVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Work Definition: </td>
 				</tr>
 				<tr>
-					<td><select class="select1" name="workdefinition"><option>select</option></select></td>
+					<td><select class="select1" name="WorkDefinitionId"><option>select</option></select></td>
 				</tr>
-				<tr><td><div id="workdefinitionVal" class="validator"></div></td></tr>
+				<tr><td><div id="WorkDefinitionIdVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Process Check: </td>
 				</tr>
 				<tr>
-					<td><input type="checkbox" name="processcheck"/></td>
+					<td><input type="checkbox" name="ProcessCheck"/></td>
 				</tr>			
 				
 				<tr height="75"> 

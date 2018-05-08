@@ -14,17 +14,17 @@
 					<td class="label1">Process ID: </td>
 				</tr>
 				<tr>
-					<td><select name="processid" class="select1"><option>select</option></select></td>
+					<td><select name="ProcessId" class="select1"><option>select</option></select></td>
 				</tr>
-				<tr><td><div id="processidVal" class="validator"></div></td></tr>
+				<tr><td><div id="ProcessIdVal" class="validator"></div></td></tr>
 				
 				<tr>
 					<td class="label1">Role ID: </td>
 				</tr>
 				<tr>
-					<td><select name="roleid" class="select1"><option>select</option></select></td>
+					<td><select name="RoleId" class="select1"><option>select</option></select></td>
 				</tr>
-				<tr><td><div id="roleidVal" class="validator"></div></td></tr>			
+				<tr><td><div id="RoleIdVal" class="validator"></div></td></tr>			
 				
 				<tr height="75"> 
 					<td colspan="2">
