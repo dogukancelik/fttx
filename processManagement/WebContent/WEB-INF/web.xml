@@ -806,4 +806,83 @@
   <!-- 
   ############# PLANNING DELETE ############### 
   -->
+  
+  
+  
+  
+    <!--
+  ############# ROLE CONTROLLER INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleControllerIndex</servlet-name>
+    <jsp-file>/view/roleController/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleControllerIndex</servlet-name>
+    <url-pattern>/roleController/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE CONTROLLER INDEX ############### 
+  -->
+  
+  
+  <!-- 
+  ############# ROLE CONTROLLER CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleControllerCreate</servlet-name>
+    <jsp-file>/view/roleController/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleControllerCreate</servlet-name>
+    <url-pattern>/roleController/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE CONTROLLER CREATE ############### 
+  -->
+
+
+
+  <!-- 
+  ############# ROLE CONTROLLER EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleControllerEdit</servlet-name>
+    <jsp-file>/view/roleController/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleControllerEdit</servlet-name>
+    <url-pattern>/roleController/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE CONTROLLER EDIT ############### 
+  -->
+  
+  
+   <!-- 
+  ############# ROLE CONTROLLER DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>roleControllerDelete</servlet-name>
+    <jsp-file>/view/roleController/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>roleControllerDelete</servlet-name>
+    <url-pattern>/roleController/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# ROLE CONTROLLER DELETE ############### 
+  -->
 </web-app>
