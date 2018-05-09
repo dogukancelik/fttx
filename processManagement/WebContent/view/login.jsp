@@ -14,12 +14,15 @@
     <form action="index" method="post" onsubmit="return validate(this)">
     	<div class="login-form-header">User Login</div>
         <img class="login-form-img" src="img/u.png"/>
-		<input type="text" name="username" class="form-input" style="background: url(img/user.png) no-repeat 10px 6px ;" placeholder="UserName"/>
+		<input type="text" name="username" id="username" class="form-input" style="background: url(img/user.png) no-repeat 10px 6px ;" placeholder="UserName"/>
 		<div id="usernameVal" class="validator" style="margin-left:35px;"></div>
         <input type="password" name="password" class="form-input" style="background: url(img/password.png) no-repeat 10px 6px ;" placeholder="Password"/>
         <div id="passwordVal" class="validator" style="margin-left:35px;"></div>
         <input type="submit" class="form-button" value="Login"/>
     </form>
 	</div>
+	<script type="text/javascript">
+	$("#username").focus();
+	</script>
 </body>
 </html>
