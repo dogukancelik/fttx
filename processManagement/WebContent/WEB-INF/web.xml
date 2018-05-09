@@ -905,4 +905,83 @@
   <!-- 
   ############# ROLE CONTROLLER DELETE ############### 
   -->
+  
+  
+  
+  
+      <!--
+  ############# CONTROLLER INDEX ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>controllerIndex</servlet-name>
+    <jsp-file>/view/controller/index.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>controllerIndex</servlet-name>
+    <url-pattern>/controller/index</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# CONTROLLER INDEX ############### 
+  -->
+  
+  
+  <!-- 
+  ############# CONTROLLER CREATE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>controllerCreate</servlet-name>
+    <jsp-file>/view/controller/create.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>controllerCreate</servlet-name>
+    <url-pattern>/controller/create</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# CONTROLLER CREATE ############### 
+  -->
+
+
+
+  <!-- 
+  ############# CONTROLLER EDIT ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>controllerEdit</servlet-name>
+    <jsp-file>/view/controller/edit.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>controllerEdit</servlet-name>
+    <url-pattern>/controller/edit/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# CONTROLLER EDIT ############### 
+  -->
+  
+  
+   <!-- 
+  ############# CONTROLLER DELETE ############### 
+  -->
+  
+  <servlet>
+    <servlet-name>controllerDelete</servlet-name>
+    <jsp-file>/view/controller/delete.jsp</jsp-file>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>controllerDelete</servlet-name>
+    <url-pattern>/controller/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  ############# CONTROLLER DELETE ############### 
+  -->
 </web-app>

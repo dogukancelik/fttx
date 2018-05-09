@@ -41,6 +41,7 @@ public class CONTROLLER {
 	    ArrayList<ControllerModel> controlArray =new ArrayList<ControllerModel>();
 	    a=cr.GetList(control.ModelArrayString(),control.GetModelName);
 		for(String []  lst : a) {
+			ControllerModel control = new ControllerModel();
 		control.setControllerId(Integer.parseInt(lst[0].toString()));
 	    control.setSubControllerId(Integer.parseInt(lst[1].toString()));
 		control.setControllerName(lst[2].toString());
