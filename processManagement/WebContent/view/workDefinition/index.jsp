@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.WorkDefinitionModel, DAL.WORKDEFINITION"  %>
+<%@ page import="model.WorkDefinitionModel, DAL.WORKDEFINITION, Account.Account, Account.Account"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -46,8 +46,25 @@
 		            <td><%=wdm.getWorkDefinitionName()%></td>
 		            <td><%=wdm.getWorkDefinitionDesciription()%> </td>
 		            <td>
-		            	<a class="a1" href="workDefinition/edit/<%=wdm.getWorkDefinitionId() %>">Edit</a> |
+		            <% 
+		            	Account ac=new Account(); 
+		            
+		            	if (ac.IsAuthority("workDefinition","edit", session.getAttribute("UserId").toString())){ 
+		            %>
+		            		<a class="a1" href="workDefinition/edit/<%=wdm.getWorkDefinitionId() %>">Edit</a>
+		            <%	
+		            	}
+		            	if(ac.IsAuthority("workDefinition","edit", session.getAttribute("UserId").toString()) && ac.IsAuthority("workDefinition","delete", session.getAttribute("UserId").toString())){
+		            %>
+		            		|
+		            <%
+		            	} 
+		            	if (ac.IsAuthority("workDefinition","delete", session.getAttribute("UserId").toString())){ 
+		            %>
 		            	<a class="a1" href="workDefinition/delete/<%=wdm.getWorkDefinitionId() %>">Delete</a>
+		            <%
+		            	} 
+		            %>
 		            </td>
 		        </tr>
 		    <% }%>

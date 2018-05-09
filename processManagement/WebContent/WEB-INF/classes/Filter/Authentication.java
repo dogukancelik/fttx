@@ -66,6 +66,7 @@ public class Authentication implements Filter {
 									if(us.getUserListId("username",kullaniciAdi.toString()," and password='"+password.toString()+"'").size()>0) 
 									{ 
 										session.setAttribute("UserId",(us.getUserListId("username",kullaniciAdi.toString()," and password='"+password.toString()+"'").get(0).getUserId()) );
+										session.setAttribute("UserName", (us.getUserListId("username",kullaniciAdi.toString()," and password='"+password.toString()+"'").get(0).getUserName()) );
 										session.setMaxInactiveInterval(60*60);
 										((HttpServletResponse)response).sendRedirect("/processManagement/index");
 									}	 

@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.ProcessModel, DAL.PROCESS"  %>
+<%@ page import="model.ProcessModel, DAL.PROCESS, Account.Account "  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -45,8 +45,25 @@
 		            <td><%=st.getProcessName()%></td>
 		            <td><%=st.getProcessDescription()%> </td>
 		            <td>
-		            	<a class="a1" href="process/edit/<%=st.getProcessId() %>">Edit</a> |
-		            	<a class="a1" href="process/delete/<%=st.getProcessId() %>">Delete</a>
+		            	<% 
+		            	Account ac=new Account(); 
+		            
+			            	if (ac.IsAuthority("process","edit", session.getAttribute("UserId").toString())){ 
+			            %>
+			            		<a class="a1" href="process/edit/<%=st.getProcessId() %>">Edit</a>
+			            <%	
+			            	}
+			            	if(ac.IsAuthority("process","edit", session.getAttribute("UserId").toString()) && ac.IsAuthority("process","delete", session.getAttribute("UserId").toString())){
+			            %>
+			            		|
+			            <%
+			            	} 
+			            	if (ac.IsAuthority("process","delete", session.getAttribute("UserId").toString())){ 
+			            %>
+			            		<a class="a1" href="process/delete/<%=st.getProcessId() %>">Delete</a>
+			            <%
+			            	} 
+			            %>
 		            </td>
 		        </tr>
 		    <% }%>

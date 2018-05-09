@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.RoleProcessModel,DAL.ROLEPROCESS"  %>
+<%@ page import="model.RoleProcessModel,DAL.ROLEPROCESS, Account.Account"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -47,8 +47,25 @@
 		            <td><%=rpm.getProcessId()%></td>
 		            <td><%=rpm.getRoleId()%> </td>
 		            <td>
-		            	<a class="a1" href="roleProcess/edit/<%=rpm.getRoleProcessId() %>">Edit</a> |
+		            <% 
+		            	Account ac=new Account(); 
+		            
+		            	if (ac.IsAuthority("roleProcess","edit", session.getAttribute("UserId").toString())){ 
+		            %>
+		            		<a class="a1" href="roleProcess/edit/<%=rpm.getRoleProcessId() %>">Edit</a>
+		            <%	
+		            	}
+		            	if(ac.IsAuthority("roleProcess","edit", session.getAttribute("UserId").toString()) && ac.IsAuthority("roleProcess","delete", session.getAttribute("UserId").toString())){
+		            %>
+		            		|
+		            <%
+		            	} 
+		            	if (ac.IsAuthority("roleProcess","delete", session.getAttribute("UserId").toString())){ 
+		            %>
 		            	<a class="a1" href="roleProcess/delete/<%=rpm.getRoleProcessId() %>">Delete</a>
+		            <%
+		            	} 
+		            %>
 		            </td>
 		        </tr>
 		    <%}%>

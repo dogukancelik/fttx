@@ -51,7 +51,6 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 					<td>
 						<select class="select1" name="WorkDefinitionId">
 							<%
-								
 								for(WorkDefinitionModel st: wrk.GetDefinitionList()){
 							%>
 							<option value="<%=st.getWorkDefinitionId()%>"><%=st.getWorkDefinitionName()%></option>
@@ -66,7 +65,13 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 				</tr>
 				<tr>
 					<td>
-						<td><input type="text" name=<%=ProcessOrderModel.GetOrder%> class="input1"/></td>
+					<select name="<%=ProcessOrderModel.GetOrder%>" class="select1">
+						<%
+							for(ProcessOrderModel mm: po.GetProcessOrderList()){
+						%>
+						<option value="<%=mm.getProcessOrderId()%>"><%=mm.getProcessOrder() %></option>
+						<%} %>
+					</select>
 					</td>
 				</tr>
 				<tr><td><div id="ProcessOrderVal" class="validator"></div></td></tr>

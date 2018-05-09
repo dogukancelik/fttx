@@ -21,7 +21,7 @@
 			<img src="img/User-icon.png" align="left"/>
 			<i class="fa fa-angle-down" style="font-size:22px;"></i>
 		</div>
-		<div class="name">Dogukan Celik</div>
+		<div class="name"><%=session.getAttribute("UserName") %></div>
 	</div>
 	<div class="sep"></div>
 	<div class="leftMenu">

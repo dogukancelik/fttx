@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.RoleControllerModel"  %>
+<%@ page import="model.RoleControllerModel, Account.Account"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -44,8 +44,25 @@
 		            <td><%=rcm.getRoleId()%></td>
 		            <td><%=rcm.getRoleControllerId()%> </td>
 		            <td>
-		            	<a class="a1" href="roleController/edit/<%=rcm.getRoleControllerId() %>">Edit</a> |
+		            <% 
+		            	Account ac=new Account(); 
+		            
+		            	if (ac.IsAuthority("roleController","edit", session.getAttribute("UserId").toString())){ 
+		            %>
+		            		<a class="a1" href="roleController/edit/<%=rcm.getRoleControllerId() %>">Edit</a>
+		            <%	
+		            	}
+		            	if(ac.IsAuthority("roleController","edit", session.getAttribute("UserId").toString()) && ac.IsAuthority("roleController","delete", session.getAttribute("UserId").toString())){
+		            %>
+		            		|
+		            <%
+		            	} 
+		            	if (ac.IsAuthority("roleController","delete", session.getAttribute("UserId").toString())){ 
+		            %>
 		            	<a class="a1" href="roleController/delete/<%=rcm.getRoleControllerId() %>">Delete</a>
+		            <%
+		            	} 
+		            %>
 		            </td>
 		        </tr>
 		    <%%>

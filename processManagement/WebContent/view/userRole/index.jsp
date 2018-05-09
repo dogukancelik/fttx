@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.UserRoleModel"  %>
+<%@ page import="model.UserRoleModel, Account.Account"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -47,8 +47,25 @@
 		            <td><%=urm.getUserId()%> </td>
 		            <td><%=urm.getUserRoleDescription() %></td>
 		            <td>
-		            	<a class="a1" href="userRole/edit/<%=urm.getUserRoleId() %>">Edit</a> |
+		            <% 
+		            	Account ac=new Account(); 
+		            
+		            	if (ac.IsAuthority("userRole","edit", session.getAttribute("UserId").toString())){ 
+		            %>
+		            		<a class="a1" href="userRole/edit/<%=urm.getUserRoleId() %>">Edit</a>
+		            <%	
+		            	}
+		            	if(ac.IsAuthority("userRole","edit", session.getAttribute("UserId").toString()) && ac.IsAuthority("userRole","delete", session.getAttribute("UserId").toString())){
+		            %>
+		            		|
+		            <%
+		            	} 
+		            	if (ac.IsAuthority("userRole","delete", session.getAttribute("UserId").toString())){ 
+		            %>
 		            	<a class="a1" href="userRole/delete/<%=urm.getUserRoleId() %>">Delete</a>
+		            <%
+		            	} 
+		            %>
 		            </td>
 		        </tr>
 		    <% %>

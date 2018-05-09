@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.ProcessStepModel, DAL.PROCESSSTEP"  %>
+<%@ page import="model.ProcessStepModel, DAL.PROCESSSTEP, Account.Account"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -47,8 +47,26 @@
 		            <td><%=st.getUserId()%> </td>
 		            <td><%=st.getProcessDate()%></td>
 		            <td>
-		            	<a class="a1" href="processStep/edit/<%=st.getProcessStepId() %>">Edit</a> |
+		            <% 
+		            	Account ac=new Account(); 
+		            
+		            	if (ac.IsAuthority("processStep","edit", session.getAttribute("UserId").toString())){ 
+		            %>
+		            		<a class="a1" href="processStep/edit/<%=st.getProcessStepId() %>">Edit</a>
+		            <%	
+		            	}
+		            	if(ac.IsAuthority("processStep","edit", session.getAttribute("UserId").toString()) && ac.IsAuthority("processStep","delete", session.getAttribute("UserId").toString())){
+		            %>
+		            		|
+		            <%
+		            	} 
+		            	if (ac.IsAuthority("processStep","delete", session.getAttribute("UserId").toString())){ 
+		            %>
 		            	<a class="a1" href="processStep/delete/<%=st.getProcessStepId() %>">Delete</a>
+		            <%
+		            	} 
+		            %>
+		            	
 		            </td>
 		        </tr>
 		    <% }%>

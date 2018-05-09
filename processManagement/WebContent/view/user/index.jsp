@@ -49,17 +49,25 @@
 		            <td><%=st.getPassword()%> </td>
 		            <td><%=st.getStatus() %></td>
 		            <td>
-		            <% Account ac=new Account(); 
+		            <% 
+		            	Account ac=new Account(); 
 		            
-		            if (ac.IsAuthority("user","edit", session.getAttribute("UserId").toString()))
-		            { 
+		            	if (ac.IsAuthority("user","edit", session.getAttribute("UserId").toString())){ 
 		            %>
-		            	<a class="a1" href="user/edit/<%=st.getUserId() %>">Edit</a> |<%
+		            		<a class="a1" href="user/edit/<%=st.getUserId() %>">Edit</a> 
+		            <%	
+		            	}
+		            	if(ac.IsAuthority("user","edit", session.getAttribute("UserId").toString()) && ac.IsAuthority("user","delete", session.getAttribute("UserId").toString())){
+		            %>
+		            		|
+		            <%
 		            	} 
-		            	if (ac.IsAuthority("user","delete", session.getAttribute("UserId").toString()))
-		            { 
+		            	if (ac.IsAuthority("user","delete", session.getAttribute("UserId").toString())){ 
 		            %>
-		            	<a class="a1" href="user/delete/<%=st.getUserId() %>">Delete</a><%} %>
+		            	<a class="a1" href="user/delete/<%=st.getUserId() %>">Delete</a>
+		            <%
+		            	} 
+		            %>
 		            </td>
 		        </tr>
 		    <%} %>
