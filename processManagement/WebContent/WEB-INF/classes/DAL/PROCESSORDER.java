@@ -41,6 +41,7 @@ public class PROCESSORDER {
 	    ArrayList<ProcessOrderModel> processArray =new ArrayList<ProcessOrderModel>();
 	    a=cr.GetList(processOrder.ModelArrayString(),processOrder.GetModelName);
 		for(String []  lst : a) {
+			ProcessOrderModel processOrder = new ProcessOrderModel();
    processArray.add(processOrder);
    processOrder.setProcessOrderId(Integer.parseInt(lst[0].toString()));
 	processOrder.setWorkDefinitionId(Integer.parseInt(lst[1].toString()));

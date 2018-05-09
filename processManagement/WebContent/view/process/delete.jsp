@@ -11,7 +11,7 @@ String ID = pathParts[pathParts.length-1];
 
 PROCESS p = new PROCESS();
 ProcessModel u = new ProcessModel();
-for(ProcessModel st:p.GetProcessList()){
+for(ProcessModel st:p.GetProcessList("ProcessId", ID)){
 	u.setProcessId(st.getProcessId());
 	u.setProcessName(st.getProcessName());
 	u.setProcessDescription(st.getProcessDescription());
@@ -28,7 +28,7 @@ for(ProcessModel st:p.GetProcessList()){
 		<div>Process Name: <b><%=u.getProcessName()%></b></div>
 		<div>Process Description: <b><%=u.getProcessDescription()%></b></div>
 		
-		<form action="/dataBase" method="post">
+		<form action="dataBase" method="post">
 		<div style="height:75px; line-height:75px">
 			<a href="process/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
 			<input type="hidden" name="actions" value="process,delete">

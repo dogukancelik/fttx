@@ -22,7 +22,7 @@ ProcessStepModel pm = new ProcessStepModel();
 		<div>User ID: <b><%=pm.getUserId() %></b></div>
 		<div>Process Step Date: <b><%=pm.getProcessDate()%></b></div>
 		
-		<form action="#" method="post">
+		<form action="dataBase" method="post">
 		<div style="height:75px; line-height:75px">
 			<a href="processStep/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
 			<input type="hidden" name="actions" value="processStep,delete">

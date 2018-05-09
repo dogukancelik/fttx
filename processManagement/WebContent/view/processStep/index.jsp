@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.ProcessStepModel"  %>
+<%@ page import="model.ProcessStepModel, DAL.PROCESSSTEP"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -38,7 +38,8 @@
 		    </tfoot>
 		    <tbody>
 		    <% 
-		    ProcessStepModel st = new ProcessStepModel();
+		    PROCESSSTEP ps = new PROCESSSTEP();
+		    for(ProcessStepModel st: ps.GetProcessOrderList()){
 		    %>
 		        <tr align="center">
 		            <td><%=st.getProcessStepId() %></td>
@@ -50,7 +51,7 @@
 		            	<a class="a1" href="processStep/delete/<%=st.getProcessStepId() %>">Delete</a>
 		            </td>
 		        </tr>
-		    <% %>
+		    <% }%>
 		    </tbody>
 		</table>
 	</div>

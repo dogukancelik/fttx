@@ -25,7 +25,7 @@ for(ModelUser st:user.getUserListId("userId", ID,""))
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-user-circle"></i> Users Edit</div>
-		<form action="/DataBase" method="post" onsubmit="return validate(this)">
+		<form action="dataBase" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
