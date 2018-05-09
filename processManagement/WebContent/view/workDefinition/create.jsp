@@ -7,7 +7,7 @@
 <div class="content">
 	<div class="contentItem" style="width:450px">
 		<div class="head"><i class="fa fa-th"></i> Work Definition Create</div>
-		<form action="#" method="post" onsubmit="return validate(this)">
+		<form action="dataBase" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
 				<tr>
@@ -22,7 +22,7 @@
 					<td class="label1">Description: </td>
 				</tr>
 				<tr>
-					<td><input type="text" name="WorkDescription" class="input1"/></td>
+					<td><input type="text" name="WorkDefinitionDescription" class="input1"/></td>
 				</tr>
 				<tr><td><div id="WorkDescriptionVal" class="validator"></div></td></tr>
 							

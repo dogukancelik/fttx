@@ -36,29 +36,33 @@ public class WORKDEFINITION {
 	CRUD cr=new CRUD();
 
 	@SuppressWarnings("static-access")
-	public ArrayList<WorkDefinitionModel> GetroleList() throws ClassNotFoundException, SQLException
+	public ArrayList<WorkDefinitionModel> GetDefinitionList() throws ClassNotFoundException, SQLException
 	{
+		
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<WorkDefinitionModel> workdefinition =new ArrayList<WorkDefinitionModel>();
 	    a=cr.GetList(WorkDefinitionModel.ModelArrayString(),WorkDefinitionModel.GetModelName);
 		for(String []  lst : a) {
-			WorkDefinitionModel.setWorkDefinitionId(Integer.parseInt(lst[0].toString()));
-			WorkDefinitionModel.setWorkDefinitionName(lst[0].toString());
-			WorkDefinitionModel.setWorkDefinitionDesciription(lst[3].toString());
-			workdefinition.add(WorkDefinitionModel);
+			 WorkDefinitionModel WorkDefinitionModels=new WorkDefinitionModel();
+			WorkDefinitionModels.setWorkDefinitionId(Integer.parseInt(lst[0].toString()));
+			WorkDefinitionModels.setWorkDefinitionName(lst[1].toString());
+			WorkDefinitionModels.setWorkDefinitionDesciription(lst[2].toString());
+			workdefinition.add(WorkDefinitionModels);
 	}
 		return workdefinition;
 		}
-	public ArrayList<WorkDefinitionModel> GetroleList(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException
+	public ArrayList<WorkDefinitionModel> GetDefinitionList(String WhereItem,String WhereValue) throws ClassNotFoundException, SQLException
 	{
+		
 		List<String[]> a= new ArrayList<String[]>();
 	    ArrayList<WorkDefinitionModel> workdefinition =new ArrayList<WorkDefinitionModel>();
-	    a=cr.GetListId(WorkDefinitionModel.ModelArrayString(),WorkDefinitionModel.GetModelName,WhereItem,WhereValue,null);
+	    a=cr.GetListId(WorkDefinitionModel.ModelArrayString(),WorkDefinitionModel.GetModelName,WhereItem,WhereValue,"");
 		for(String []  lst : a) {
-			WorkDefinitionModel.setWorkDefinitionId(Integer.parseInt(lst[0].toString()));
-			WorkDefinitionModel.setWorkDefinitionName(lst[0].toString());
-			WorkDefinitionModel.setWorkDefinitionDesciription(lst[3].toString());
-			workdefinition.add(WorkDefinitionModel);
+			 WorkDefinitionModel WorkDefinitionModels=new WorkDefinitionModel();
+			WorkDefinitionModels.setWorkDefinitionId(Integer.parseInt(lst[0].toString()));
+			WorkDefinitionModels.setWorkDefinitionName(lst[1].toString());
+			WorkDefinitionModels.setWorkDefinitionDesciription(lst[2].toString());
+			workdefinition.add(WorkDefinitionModels);
 	}
 		return workdefinition;
 		}

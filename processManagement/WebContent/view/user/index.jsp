@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="DAL.USER,model.ModelUser"  %>
+<%@ page import="DAL.USER,model.ModelUser, Account.Account "  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -49,8 +49,17 @@
 		            <td><%=st.getPassword()%> </td>
 		            <td><%=st.getStatus() %></td>
 		            <td>
-		            	<a class="a1" href="user/edit/<%=st.getUserId() %>">Edit</a> |
-		            	<a class="a1" href="user/delete/<%=st.getUserId() %>">Delete</a>
+		            <% Account ac=new Account(); 
+		            
+		            if (ac.IsAuthority("user","edit", session.getAttribute("UserId").toString()))
+		            { 
+		            %>
+		            	<a class="a1" href="user/edit/<%=st.getUserId() %>">Edit</a> |<%
+		            	} 
+		            	if (ac.IsAuthority("user","delete", session.getAttribute("UserId").toString()))
+		            { 
+		            %>
+		            	<a class="a1" href="user/delete/<%=st.getUserId() %>">Delete</a><%} %>
 		            </td>
 		        </tr>
 		    <%} %>

@@ -2,7 +2,7 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.WorkDefinitionModel"  %>
+<%@ page import="model.WorkDefinitionModel, DAL.WORKDEFINITION"  %>
 
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -37,7 +37,9 @@
 		    </tfoot>
 		    <tbody>
 		    <% 
-		    WorkDefinitionModel wdm = new WorkDefinitionModel();
+		    WORKDEFINITION wokdef=new WORKDEFINITION();
+		    for(WorkDefinitionModel wdm:wokdef.GetDefinitionList() )
+		    {
 		    %>
 		        <tr align="center">
 		            <td><%=wdm.getWorkDefinitionId() %></td>
@@ -48,7 +50,7 @@
 		            	<a class="a1" href="workDefinition/delete/<%=wdm.getWorkDefinitionId() %>">Delete</a>
 		            </td>
 		        </tr>
-		    <% %>
+		    <% }%>
 		    </tbody>
 		</table>
 	</div>

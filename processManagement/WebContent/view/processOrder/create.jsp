@@ -2,10 +2,12 @@
 
 <%@ include file="/view/shared/layout_header.jsp" %>
 
-<%@ page import="model.ProcessOrderModel, DAL.PROCESSORDER"  %>
+<%@ page import="model.ProcessOrderModel,model.ProcessModel,model.WorkDefinitionModel , DAL.PROCESSORDER, DAL.PROCESS,DAL.WORKDEFINITION"  %>
 
 <%
 PROCESSORDER po = new PROCESSORDER();
+PROCESS process=new PROCESS();
+WORKDEFINITION wrk=new WORKDEFINITION();
 ProcessOrderModel u = new ProcessOrderModel();
 for(ProcessOrderModel st: po.GetProcessOrderList()){
 	u.setProcessOrderId(st.getProcessOrderId());
@@ -31,9 +33,11 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 						<select class="select1" name="ProcessId">
 							<%
 								
-								for(ProcessOrderModel st2: po.GetProcessOrderList()){
+								for(ProcessModel st2: process.GetProcessList()){
 							%>
-							<option><%=st2.getProcessId()%></option>
+							<option value="<%=st2.getProcessId()%>"><%=st2.getProcessName()%>
+							 
+							</option>
 							<%} %>
 						</select>
 					</td>
@@ -48,9 +52,9 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 						<select class="select1" name="WorkDefinitionId">
 							<%
 								
-								for(ProcessOrderModel st2: po.GetProcessOrderList()){
+								for(WorkDefinitionModel st: wrk.GetDefinitionList()){
 							%>
-							<option><%=st2.getWorkDefinitionId()%></option>
+							<option value="<%=st.getWorkDefinitionId()%>"><%=st.getWorkDefinitionName()%></option>
 							<%} %>
 						</select>
 					</td>
@@ -62,14 +66,7 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 				</tr>
 				<tr>
 					<td>
-						<select class="select1" name="ProcessOrder">
-							<%
-								
-								for(ProcessOrderModel st2: po.GetProcessOrderList()){
-							%>
-							<option><%=st2.getProcessOrder()%></option>
-							<%} %>
-						</select>
+						<td><input type="text" name=<%=ProcessOrderModel.GetOrder%> class="input1"/></td>
 					</td>
 				</tr>
 				<tr><td><div id="ProcessOrderVal" class="validator"></div></td></tr>
@@ -85,7 +82,8 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 					<td colspan="2">
 						<a href="processOrder/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
 						<input type="hidden" name="actions" value="processOrder,create">
-						<input type="submit" value="Create" class="button1">
+												<input type="hidden" name=<%=u.GetProcessOrderId %> value=<%=u.getProcessOrderId() %>>
+												<input type="submit" value="Create" class="button1">
 					</td>
 				</tr>
 			</tbody>
