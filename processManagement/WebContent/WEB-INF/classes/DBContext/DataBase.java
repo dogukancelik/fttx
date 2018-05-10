@@ -54,6 +54,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
  String [] prm=request.getParameter("actions").split(",");
  String controller=prm[0];
  String action=prm[1];
+ //System.out.println(request.getParameter("ProcessCheck").toString());
 	try {	
 	switch (controller.toLowerCase()) { 
      case "user": if(action.equals("create")) {  user.Create(user.modeldoldur(request));
@@ -77,7 +78,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 														}
 			  }   ;
               break;
-     case "processorder":   if(action.equals("create")) {  usroleorder.Create(usroleorder.modeldoldur(request));
+     case "processorder":   if(action.equals("create")) { usroleorder.Create(usroleorder.modeldoldur(request));
 		}else {  if(action.equals("edit")) {usroleorder.Edit(usroleorder.modeldoldur(request)); 
 		  } else { if(action.equals("delete")) { usroleorder.Delete(usroleorder.modeldoldur(request));
 																						}

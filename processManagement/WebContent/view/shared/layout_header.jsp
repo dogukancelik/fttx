@@ -1,3 +1,6 @@
+<%@ page import="Account.Menu" %>
+<%Menu mn=new Menu(); %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -26,17 +29,18 @@
 	<div class="sep"></div>
 	<div class="leftMenu">
 		<ul>
-			<li><i class="fa fa-circle"></i> <a href="user/">User</a></li>
-			<li><i class="fa fa-circle"></i> <a href="process/">Process</a></li>
-			<li><i class="fa fa-circle"></i> <a href="processOrder/">Process Order</a></li>
-			<li><i class="fa fa-circle"></i> <a href="processStep/">Process Step</a></li>
-			<li><i class="fa fa-circle"></i> <a href="role/">Role</a></li>
-			<li><i class="fa fa-circle"></i> <a href="roleProcess/">Role Process</a></li>
-			<li><i class="fa fa-circle"></i> <a href="userRole/">User Role</a></li>
-			<li><i class="fa fa-circle"></i> <a href="workDefinition/">Work Definition</a></li>
-			<li><i class="fa fa-circle"></i> <a href="planning/">Planning</a></li>
-			<li><i class="fa fa-circle"></i> <a href="roleController/">Role Controller</a></li>
-			<li><i class="fa fa-circle"></i> <a href="controller/">Controller</a></li>
+		<%
+		String str=session.getAttribute("UserId").toString();
+		for( String [] st:(mn.Menus(str)))  {
+		%>
+			<li style="height:10px"><i class="fa fa-circle"></i> <%=st[1]%></li>
+			<ul>
+			<%for( String [] sts:(mn.subMenu(str,st[0].toString() )))  {
+		%>
+			<li> <a href="<%=sts[1]%>/<%=sts[2]%>">--<%=sts[2] %></a></li>
+			<%}%>
+			</ul>
+			<%} %>
 		</ul>
 	</div>
 	

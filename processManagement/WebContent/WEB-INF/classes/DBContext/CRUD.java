@@ -15,8 +15,7 @@ public class CRUD   {
 		if(kosul=="") {      queryString="Select "+query.substring(0, query.length()-1)+" from "+model.toString()+" where "+wherePrmt.toString()+"='"+wherevalue.toString()+"'"; 
 		}else {queryString="Select "+query.substring(0, query.length()-1)+" from "+model.toString()+" where "+wherePrmt.toString()+"='"+wherevalue.toString()+"' "+kosul.toString(); 
 	       }
-		       System.out.println(queryString);
-				PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(queryString);
+		       PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(queryString);
 				 ResultSet rs = psmt.executeQuery();
 				List sbn=new ArrayList<String>();
 				if(!rs.wasNull()) {
@@ -64,13 +63,14 @@ public int Create(String[] prm,String[] prm3,String model) throws SQLException, 
 	} s++;
 	}
 	      queryString="INSERT INTO `"+model.toString()+"` ("+query.substring(0, query.length()-1)+") VALUE ("+valu.substring(0,	valu.length()-1)+")";
-	      System.out.println(queryString);
+	     // System.out.println(queryString);
 	     	 PreparedStatement psmt = (PreparedStatement) dbContext.ConnectionOpen().prepareStatement(queryString);
 	     	int i=0;
 	     	 for(String pr2:prm3)
 				{
 				
 				if(i>0) {
+				
 					psmt.setString(i,pr2.toString());
 					}
 	     	 		i++;

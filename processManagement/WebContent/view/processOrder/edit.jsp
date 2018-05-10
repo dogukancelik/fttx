@@ -1,3 +1,4 @@
+<%@page import="com.sun.javafx.scene.web.Printable"%>
 <%@ include file="/view/shared/secure.jsp" %>
 
 <%@ include file="/view/shared/layout_header.jsp" %>
@@ -11,13 +12,8 @@ String ID = pathParts[pathParts.length-1];
 
 PROCESSORDER po = new PROCESSORDER();
 ProcessOrderModel u = new ProcessOrderModel();
-for(ProcessOrderModel st: po.GetProcessOrderList("ProcessOrderId", ID)){
-	u.setProcessOrderId(st.getProcessOrderId());
-	u.setProcessId(st.getProcessId());
-	u.setProcessOrder(st.getProcessOrder());
-	u.setWorkDefinitionId(st.getWorkDefinitionId());
-	u.setProcessCheck(st.getProcessCheck());
-}
+
+u=po.GetProcessOrderList("ProcessOrderId", ID).get(0);
 
 %>
 
@@ -82,9 +78,8 @@ for(ProcessOrderModel st: po.GetProcessOrderList("ProcessOrderId", ID)){
 					<td class="label1">Process Check: </td>
 				</tr>
 				<tr>
-					<td><input type="checkbox" name="ProcessCheck" checked="<%=u.getProcessCheck()%>"/></td>
+					<td><input type="checkbox" name="ProcessCheck"  <% if(u.getProcessCheck()){ out.print("checked");}%>/></td>
 				</tr>			
-				
 				<tr height="75"> 
 					<td colspan="2">
 						<a href="processOrder/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>

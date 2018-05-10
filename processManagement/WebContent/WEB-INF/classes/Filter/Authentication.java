@@ -26,11 +26,10 @@ import javax.servlet.http.HttpSession;
 		DispatcherType.REQUEST,
 		DispatcherType.FORWARD,
 		DispatcherType.INCLUDE}
-,urlPatterns= {"/s","/index","/planning/index","/process/index","/processOrder/index","/processStep/index","/role/index","/roleProcess/index","/shared/layout_footer","/user/index","/userRole/index","/workDefinition/index",
+,urlPatterns= {  "/s","/index","/planning/index","/process/index","/processOrder/index","/processStep/index","/role/index","/roleProcess/index","/shared/layout_footer","/user/index","/userRole/index","/workDefinition/index",
 		"/planning/create","/process/create","/processOrder/create","/processStep/create","/role/create","/roleProcess/create","/shared/layout_header","/user/create","/userRole/create","/workDefinition/create",
 		"/planning/edit","/process/edit","/processOrder/edit","/processStep/edit","/role/edit","/roleProcess/edit","/shared/secure","/user/edit","/userRole/edit","/workDefinition/edit",
 		"/planning/delete","/process/delete","/processOrder/delete","/processStep/delete","/role/delete","/roleProcess/delete","/shared/","/user/delete","/userRole/delete","/workDefinition/delete"
-
 })
 public class Authentication implements Filter {
 

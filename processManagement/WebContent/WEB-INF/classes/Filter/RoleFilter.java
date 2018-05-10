@@ -33,11 +33,11 @@ import javax.servlet.http.HttpSession;
 				DispatcherType.INCLUDE
 		}
 					, 
-					urlPatterns= {"/s","/user/","/planning/index","/process/index","/processOrder/index","/processStep/index","/role/index","/roleProcess/index","/shared/layout_footer","/user/index","/userRole/index","/workDefinition/index",
+					urlPatterns= {"/s","/planning/index","/process/index","/processOrder/index","/processStep/index","/role/index","/roleProcess/index","/shared/layout_footer","/user/index","/userRole/index","/workDefinition/index",
 							"/planning/create","/process/create","/processOrder/create","/processStep/create","/role/create","/roleProcess/create","/shared/layout_header","/user/create","/userRole/create","/workDefinition/create",
 							"/planning/edit","/process/edit","/processOrder/edit","/processStep/edit","/role/edit","/roleProcess/edit","/shared/secure","/user/edit","/userRole/edit","/workDefinition/edit",
 							"/planning/delete","/process/delete","/processOrder/delete","/processStep/delete","/role/delete","/roleProcess/delete","/shared/","/user/delete","/userRole/delete","/workDefinition/delete"
-		})
+	})
 public class RoleFilter implements Filter {
 
     /**
@@ -63,14 +63,13 @@ public class RoleFilter implements Filter {
 	@SuppressWarnings("deprecation")
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 	Account ac=new Account();
-	
 	final HttpSession session = ((HttpServletRequest) request).getSession();
 
 	String [] url=((HttpServletRequest)request).getRequestURI().split("/");
 	String controller=url[url.length-2];
 	String action=url[url.length-1];
 	String UserId=session.getAttribute("UserId").toString();
-	System.out.println(controller+" "+action+" "+UserId);
+	
 	
 	if(!controller.equals("processManagement")) {
 	  
@@ -79,8 +78,8 @@ public class RoleFilter implements Filter {
 		
 		try {
 			as = ac.IsAuthority(controller, action,UserId);
-			System.out.println(controller+" "+action+" "+UserId);
-			System.out.println(as);	
+			//System.out.println(controller+" "+action+" "+UserId);
+		
 			if (as==true) {
 				
 				

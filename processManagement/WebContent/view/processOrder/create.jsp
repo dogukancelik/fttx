@@ -25,6 +25,21 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 		<form action="dataBase" method="post" onsubmit="return validate(this)">
 		<table style="margin:15px; width:400px;">
 			<tbody>
+			<tr>
+					<td class="label1">Work Definition: </td>
+				</tr>
+				<tr>
+					<td>
+						<select class="select1" name="WorkDefinitionId">
+							<%
+								for(WorkDefinitionModel st: wrk.GetDefinitionList()){
+							%>
+							<option value="<%=st.getWorkDefinitionId()%>"><%=st.getWorkDefinitionName()%></option>
+							<%} %>
+						</select>
+					</td>
+				</tr>
+				<tr><td><div id="WorkDefinitionIdVal" class="validator"></div></td></tr>
 				<tr>
 					<td class="label1">Process ID: </td>
 				</tr>
@@ -43,36 +58,11 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 					</td>
 				</tr>
 				<tr><td><div id="ProcessIdVal" class="validator"></div></td></tr>
-				
-				<tr>
-					<td class="label1">Work Definition: </td>
-				</tr>
-				<tr>
-					<td>
-						<select class="select1" name="WorkDefinitionId">
-							<%
-								for(WorkDefinitionModel st: wrk.GetDefinitionList()){
-							%>
-							<option value="<%=st.getWorkDefinitionId()%>"><%=st.getWorkDefinitionName()%></option>
-							<%} %>
-						</select>
-					</td>
-				</tr>
-				<tr><td><div id="WorkDefinitionIdVal" class="validator"></div></td></tr>
-				
 				<tr>
 					<td class="label1">Process Order ID: </td>
 				</tr>
 				<tr>
-					<td>
-					<select name="<%=ProcessOrderModel.GetOrder%>" class="select1">
-						<%
-							for(ProcessOrderModel mm: po.GetProcessOrderList()){
-						%>
-						<option value="<%=mm.getProcessOrderId()%>"><%=mm.getProcessOrder() %></option>
-						<%} %>
-					</select>
-					</td>
+					<td><input type="text" name="ProcessOrder" class="input1"/></td>
 				</tr>
 				<tr><td><div id="ProcessOrderVal" class="validator"></div></td></tr>
 				
@@ -87,7 +77,6 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 					<td colspan="2">
 						<a href="processOrder/index" class="a1"><i class="fa fa-arrow-circle-left"></i>Go Back</a>
 						<input type="hidden" name="actions" value="processOrder,create">
-												<input type="hidden" name=<%=u.GetProcessOrderId %> value=<%=u.getProcessOrderId() %>>
 												<input type="submit" value="Create" class="button1">
 					</td>
 				</tr>
