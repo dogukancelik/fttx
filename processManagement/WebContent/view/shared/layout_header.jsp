@@ -33,16 +33,33 @@
 		String str=session.getAttribute("UserId").toString();
 		for( String [] st:(mn.Menus(str)))  {
 		%>
-			<li style="height:10px"><i class="fa fa-circle"></i> <%=st[1]%></li>
-			<ul>
-			<%for( String [] sts:(mn.subMenu(str,st[0].toString() )))  {
-		%>
-			<li> <a href="<%=sts[1]%>/<%=sts[2]%>">--<%=sts[2] %></a></li>
-			<%}%>
-			</ul>
+			<li><i class="fa fa-circle"></i> <%=st[1]%>
+				<ul class="sub">
+				<%
+					for( String [] sts:(mn.subMenu(str,st[0].toString() )))  {
+				%>
+					<li> <i class="fa fa-circle-o"></i> <a href="<%=sts[1]%>/<%=sts[2]%>"><%=sts[2] %></a></li>
+				<%}%>
+				</ul>
+			</li>
 			<%} %>
 		</ul>
 	</div>
+	<script>
+		$( document ).ready(function() {
+		    $(".leftMenu > ul:first-child > li").click(function(){
+		    	if($(this).hasClass("active")){
+		    		$(this).removeClass("active");
+		    		$(this).children("ul").removeClass("active");
+		    	}
+		    	else{
+		    		$(this).addClass("active");
+		    		$(this).children("ul").addClass("active");
+		    	}
+		    	
+		    });
+		});
+	</script>
 	
 	<div class="userMenu">
 		<img src="img/arrowUp.png"/>
