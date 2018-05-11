@@ -31,6 +31,25 @@
 	color:#333333;
 }
 
+.verticalButton{
+	width:35px;
+	height:70px;
+	line-height:70px;
+	font-size:20px;
+	position:relative;
+	background-color:#ffffff;
+	color:#343539;
+	border:1px solid #666666;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.verticalButton:hover{
+	background-color:#343539;
+	color:#ffffff;
+}
+
 .label1{
 	font-weight:bold;
 	font-size:15px;
@@ -61,4 +80,9 @@ textarea{
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding-left:5px;
+}
+
+.selectMultiple1{
+	min-width:225px;
+	outline:none;
 }

@@ -31,15 +31,18 @@
 	<div class="leftMenu">
 		<ul>
 		<%
+		String url = request.getRequestURL().toString();
+		String[] pathParts2 = url.split("/");
+		
 		String str=session.getAttribute("UserId").toString();
-		for( String [] st:(mn.Menus(str)))  {
+		for( String [] st:(mn.Menus(str)))  { 
 		%>
-			<li><i class="fa fa-circle"></i> <%=st[1]%>
-				<ul class="sub">
+			<li <%if(pathParts2[pathParts2.length-2].equals(st[1])){out.print("class='active'");} %>><i class="fa fa-circle"></i> <%=st[1]%>
+				<ul class="sub <%if(pathParts2[pathParts2.length-2].equals(st[1])){out.print("active");} %>">
 				<%
 					for( String [] sts:(mn.subMenu(str,st[0].toString() )))  {
 				%>
-					<li> <i class="fa fa-circle-o"></i> <a href="<%=sts[1]%>/<%=sts[2]%>"><%=sts[2] %></a></li>
+					<li > <i class="fa fa-circle-o"></i> <a href="<%=sts[1]%>/<%=sts[2]%>"><%=sts[2] %></a></li>
 				<%}%>
 				</ul>
 			</li>
