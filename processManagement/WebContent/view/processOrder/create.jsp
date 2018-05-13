@@ -61,15 +61,15 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 					</td>
 					
 					<td width="136" align="center">
-            			<input type="button" value=" Seçilenleri Ekle >> " onclick="selectAdd('selectFrom', 'selectTo')"/>
-                		<input type="button" value=" << Seçilenleri Sil &nbsp;&nbsp;&nbsp;" onclick="selectRemove('selectFrom', 'selectTo')"/>
+            			<input type="button" value=" Seçilenleri Ekle >> " onclick="selectAdd('selectFrom', 'ProcessOrder')"/>
+                		<input type="button" value=" << Seçilenleri Sil &nbsp;&nbsp;&nbsp;" onclick="selectRemove('selectFrom', 'ProcessOrder')"/>
             		</td>
 					<td width="252" align="right">
-						<select class="selectMultiple1" name="selectTo" multiple="multiple" size="15"></select>
+						<select class="selectMultiple1" name="ProcessOrder" size="15"></select>
 					</td>
 					<td align="center">
-						<div class="verticalButton"><i class="fa fa-arrow-up"></i></div><br>
-						<div class="verticalButton"><i class="fa fa-arrow-down"></i></div>
+						<div class="verticalButton" onclick="selectOrder(-1, 'ProcessOrder')"><i class="fa fa-arrow-up"></i></div><br>
+						<div class="verticalButton"><i class="fa fa-arrow-down" onclick="selectOrder(+1, 'ProcessOrder')"></i></div>
 					</td>
 				</tr>
 				

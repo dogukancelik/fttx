@@ -58,3 +58,96 @@ function validate(elm){
 		return false;
 	}
 }
+
+function selectAdd(from, to){
+	var from = $("select[name='"+from+"']");
+	var to = $("select[name='"+to+"']");
+	var i = to.children("option").length+1;
+	
+	if(from.val().length>0){
+		from.children("option:selected").each(function(){
+			if(!$(this).is("[hidden=hidden]")){
+				$(this).attr("hidden", "hidden");
+				var text = $(this).text();
+				var val = $(this).val();
+				to.append("<option value='"+val+"'>"+i+"-) "+text+"</option>");
+				i++;
+			}
+		});
+	}
+}
+
+function selectRemove(from, to){
+	var from = $("select[name='"+from+"']");
+	var to = $("select[name='"+to+"']");
+	
+	to.children("option:selected").each(function(){
+		var f = $("option[value='"+$(this).val()+"']");
+		from.find(f).removeAttr("hidden");
+		$(this).remove();
+	});
+	
+	selectRePresent(to);
+}
+
+function selectRePresent(to){
+	var d = [];
+	to.children("option").each(function(){
+		var x = $(this).text().split("-) ");
+		d.push([$(this).val(), x[1]]);
+		$(this).remove();
+	});
+	
+	for(var i=0;i<d.length;i++){
+		to.append("<option value='"+d[i][0]+"'>"+(i+1)+"-) "+d[i][1]+"</option>");
+	}
+}
+
+function selectOrder(o, to){
+	var to = $("select[name='"+to+"']");
+	var d = [];
+	var s = to.children("option:selected").index();
+	if(s!=-1){
+		to.children("option").each(function(){
+			var x = $(this).text().split("-) ");
+			d.push([$(this).val(), x[1]]);
+		});
+		
+		if(o == -1 && s>0){
+			d00 = d[s-1][0];
+			d01 = d[s-1][1];
+			
+			d10 = d[s][0];
+			d11 = d[s][1];
+			
+			d[s-1][0] = d10;
+			d[s-1][1] = d11;
+			d[s][0] = d00;
+			d[s][1] = d01;
+			
+			to.children("option").remove();
+			for(var i=0;i<d.length;i++){
+				to.append("<option value='"+d[i][0]+"'>"+(i+1)+"-) "+d[i][1]+"</option>");
+			}
+		}
+		else if(o == +1 && s<d.length-1){
+			d00 = d[s+1][0];
+			d01 = d[s+1][1];
+			
+			d10 = d[s][0];
+			d11 = d[s][1];
+			
+			d[s+1][0] = d10;
+			d[s+1][1] = d11;
+			d[s][0] = d00;
+			d[s][1] = d01;
+			
+			to.children("option").remove();
+			for(var i=0;i<d.length;i++){
+				to.append("<option value='"+d[i][0]+"'>"+(i+1)+"-) "+d[i][1]+"</option>");
+			}
+		}
+		
+		
+	}
+}
