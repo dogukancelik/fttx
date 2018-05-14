@@ -12,13 +12,14 @@ import model.RoleProcessModel;
 
 public class ROLEPROCESS {
 
-	public	String[] model=new String[3];
+	public	String[] model=new String[4];
 	public RoleProcessModel modeldoldur (HttpServletRequest s)
 	{
 		RoleProcessModel us =new RoleProcessModel();
 		us.setProcessId(Integer.parseInt(s.getParameter(us.GetProcessId)!=null?s.getParameter(us.GetProcessId):"0"));
 		us.setRoleId(Integer.parseInt(s.getParameter(us.GetRoleId)!=null?s.getParameter(us.GetRoleId):"0"));
 		us.setRoleProcessId(Integer.parseInt(s.getParameter(us.GetRoleProcessId)!=null?s.getParameter(us.GetRoleProcessId):"0"));
+		us.setWorkDefinitionId(Integer.parseInt(s.getParameter(us.GetWorkDefinitionId)!=null?s.getParameter(us.GetWorkDefinitionId):"0"));
 		return us;
 	}
 	private void model_doldur(RoleProcessModel m){
@@ -26,6 +27,7 @@ public class ROLEPROCESS {
 		model[0]=String.valueOf(m.getRoleProcessId());
 		model[1]=String.valueOf(m.getRoleId());
 		model[2]=String.valueOf(m.getProcessId());
+		model[3]=String.valueOf(m.getWorkDefinitionId());
 	 }
 	RoleProcessModel roleProcess=new RoleProcessModel();
 	CRUD cr=new CRUD();

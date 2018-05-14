@@ -134,7 +134,23 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 														}
 			  }   ;
                           break;
+     case "planning":  if(action.equals("create")) {  
+    	 
+    	 String prn=request.getParameter("planingData");
+    	 
+    	 System.out.println(prn);
+    	// String[] yndata=(String[])request.getParameter("planningData2").split(",");
+    	 
+    	// planingCreate(prn, yndata);
+		
+     
+     
+     }else {  if(action.equals("edit")) {wrk.Edit(wrk.modeldoldur(request)); 
+		  } 
+			  }   ;
+                       break;
      }
+	
 	
    response.sendRedirect("/processManagement/"+controller+"/");
 		
@@ -147,6 +163,8 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		e.printStackTrace();
 	}
 	
+	
+
 	
 		 /*	try {
 		
@@ -193,6 +211,41 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 					e.printStackTrace();
 				}*/
 			     }
+
+public void planingCreate ( String [][] pr, String[] ynData) throws ClassNotFoundException, SQLException
+{
+	CRUD cr=new CRUD();
+	String[][] ata = null;
+	String[][] ata1 = null;
+	String[] prm=new String[] {"ProcessId","WorkdefinitionId","PlanDate","PlanEndDate","UserId","Satatus"};
+	String[] prms=new String[] {"PlanningId","ProcessId","WorkdefinitionId","PlanDate","PlanEndDate","UserId","Satatus"};
+ int k=0;
+int t=0;
+	for(int j=0;j<pr.length;j++) {
+		if(ynData.toString().contains(pr[j][0])) {
+			String a=((String [])((ArrayList)(cr.Query( "Select WorkDefinitionId from workdefinition where WorkDefinitionName="+pr[j][1].toString().split("/")[0].toString()))).get(0))[0];
+		ata[t]= new String[] {pr[j][0],a,pr[j][2],pr[j][3],pr[j][4],"0"};
+		t++;
+	}else {
+		String a=((String [])((ArrayList)(cr.Query( "Select WorkDefinitionId from workdefinition where WorkDefinitionName="+pr[j][1].toString().split("/")[0].toString()))).get(0))[0];
+		ata[k]= new String[] {pr[j][0],a,pr[j][2],pr[j][3],pr[j][4],"0"}; k++;
+	}}
+		for(int i=0;i<ata.length;i++) {
+		int a=cr.Create(prm,ata[i],"planning");
+		}
+	
+	
+}
+
+@SuppressWarnings("unchecked")
+public ArrayList<String[]> planingList ( ) throws ClassNotFoundException, SQLException
+{
+	CRUD cr=new CRUD();
+	String[] prm=new String[] {"PlanId","ProcessId","WorkdefinitionId","PlanDate","PlanEndDate","UserId","Status"};
+	
+	
+	return (ArrayList)cr.Query("Select PlanId,ProcessId,WorkdefinitionId,PlanDate,PlanEndDate from planning where Status !=1"); 
+}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
