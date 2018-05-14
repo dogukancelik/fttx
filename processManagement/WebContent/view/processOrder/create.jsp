@@ -17,7 +17,7 @@ for(ProcessOrderModel st: po.GetProcessOrderList()){
 	u.setProcessCheck(st.getProcessCheck());
 }
 
-%>
+%> 
 
 <div class="content">
 	<div class="contentItem" style="width:800px">
